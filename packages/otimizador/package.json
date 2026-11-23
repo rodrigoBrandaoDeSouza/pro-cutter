@@ -1,0 +1,16 @@
+{
+  "name": "@pro-cutter/otimizador",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@pro-cutter/core": "*"
+  },
+  "devDependencies": {
+    "@pro-cutter/promob": "*",
+    "@pro-cutter/cvl": "*"
+  }
+}

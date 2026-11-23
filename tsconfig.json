@@ -1,4 +1,4 @@
 {
   "files": [],
-  "references": [{ "path": "packages/core" }, { "path": "packages/promob" }, { "path": "packages/cvl" }]
+  "references": [{ "path": "packages/core" }, { "path": "packages/promob" }, { "path": "packages/cvl" }, { "path": "packages/otimizador" }]
 }

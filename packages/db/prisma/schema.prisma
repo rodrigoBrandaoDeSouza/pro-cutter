@@ -1,0 +1,277 @@
+// pro-cutter: schema da v1. Toda tabela de dados de negócio tem empresaId (multiempresa desde o início).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Papel {
+  ADMIN
+  USUARIO
+}
+
+enum StatusProjeto {
+  ORCAMENTO
+  APROVADO
+  EM_CORTE
+  CORTADO
+  ENTREGUE
+  CANCELADO
+}
+
+enum OrigemPeca {
+  XML
+  GERADA
+  MANUAL
+}
+
+enum StatusPlano {
+  ATUAL
+  DESATUALIZADO
+}
+
+model Empresa {
+  id           String         @id @default(cuid())
+  nome         String
+  criadoEm     DateTime       @default(now())
+  configuracao Configuracao?
+  usuarios     Usuario[]
+  materiais    Material[]
+  fitas        Fita[]
+  maquinas     Maquina[]
+  clientes     Cliente[]
+  projetos     Projeto[]
+}
+
+/// Configurações da marcenaria. Estruturas editáveis ficam em JSON versionado (ver packages/db/src/config.ts).
+model Configuracao {
+  id          String  @id @default(cuid())
+  empresaId   String  @unique
+  empresa     Empresa @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  /// ParametroRegra[]
+  regras      Json
+  /// TipoModulo[]
+  tiposModulo Json
+  /// mapaGrupos, origemPorTipo, ladosFita
+  importacao  Json
+  /// { largura, altura } em mm
+  etiqueta    Json
+  versao      Int     @default(1)
+}
+
+model Usuario {
+  id        String    @id @default(cuid())
+  empresaId String
+  empresa   Empresa   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  nome      String
+  email     String    @unique
+  senhaHash String
+  papel     Papel     @default(USUARIO)
+  ativo     Boolean   @default(true)
+  criadoEm  DateTime  @default(now())
+  sessoes   Sessao[]
+
+  @@index([empresaId])
+}
+
+/// Sessão de login. O id é o hash SHA-256 do token do cookie (o token em si nunca é guardado).
+model Sessao {
+  id        String   @id
+  usuarioId String
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  expiraEm  DateTime
+  criadoEm  DateTime @default(now())
+
+  @@index([usuarioId])
+}
+
+model Material {
+  id               String   @id @default(cuid())
+  empresaId        String
+  empresa          Empresa  @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  descricao        String
+  espessura        Float
+  chapaComprimento Float
+  chapaLargura     Float
+  temVeio          Boolean  @default(false)
+  /// Chaves `${modelo}|${espessura}` do Promob que casam com este material
+  chavesPromob     String[]
+  /// Atributo `material` do .prog da CVL (ex.: "MDF-15-Branco-MDF Branco 15mm")
+  textoProg        String?
+  ativo            Boolean  @default(true)
+  pecas            Peca[]
+
+  @@index([empresaId])
+}
+
+model Fita {
+  id        String  @id @default(cuid())
+  empresaId String
+  empresa   Empresa @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  cor       String
+  espessura Float
+  ativo     Boolean @default(true)
+
+  @@index([empresaId])
+}
+
+model Maquina {
+  id            String    @id @default(cuid())
+  empresaId     String
+  empresa       Empresa   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  nome          String
+  exportador    String    @default("cvl-prog")
+  serra         Float     @default(4)
+  refiloFabrica Float     @default(5)
+  refiloSerrado Float     @default(1)
+  niveisMax     Int       @default(3)
+  sobraMinComp  Float     @default(300)
+  sobraMinLarg  Float     @default(300)
+  padrao        Boolean   @default(false)
+  projetos      Projeto[]
+
+  @@index([empresaId])
+}
+
+model Cliente {
+  id        String    @id @default(cuid())
+  empresaId String
+  empresa   Empresa   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  nome      String
+  telefone  String    @default("")
+  criadoEm  DateTime  @default(now())
+  projetos  Projeto[]
+
+  @@index([empresaId])
+}
+
+model Projeto {
+  id           String            @id @default(cuid())
+  empresaId    String
+  empresa      Empresa           @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  clienteId    String
+  cliente      Cliente           @relation(fields: [clienteId], references: [id])
+  nome         String
+  status       StatusProjeto     @default(ORCAMENTO)
+  /// Valores das regras copiados das Configurações na criação (ValoresRegras)
+  regras       Json
+  /// Tipos de módulo copiados das Configurações na criação (TipoModulo[])
+  tiposModulo  Json
+  maquinaId    String?
+  maquina      Maquina?          @relation(fields: [maquinaId], references: [id])
+  observacoes  String            @default("")
+  criadoEm     DateTime          @default(now())
+  atualizadoEm DateTime          @updatedAt
+  ambientes    Ambiente[]
+  historico    HistoricoStatus[]
+  planos       PlanoDeCorte[]
+
+  @@index([empresaId, status])
+  @@index([empresaId, clienteId])
+}
+
+model HistoricoStatus {
+  id        String         @id @default(cuid())
+  empresaId String
+  projetoId String
+  projeto   Projeto        @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  de        StatusProjeto?
+  para      StatusProjeto
+  usuarioId String
+  em        DateTime       @default(now())
+
+  @@index([empresaId, projetoId])
+}
+
+model Ambiente {
+  id          String    @id @default(cuid())
+  empresaId   String
+  projetoId   String
+  projeto     Projeto   @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  nome        String
+  /// XML original do Promob, guardado para reimportação/auditoria
+  xmlOriginal String?
+  importadoEm DateTime?
+  ordem       Int       @default(0)
+  modulos     Modulo[]
+  pecas       Peca[]
+
+  @@index([empresaId, projetoId])
+}
+
+model Modulo {
+  id              String   @id @default(cuid())
+  empresaId       String
+  ambienteId      String
+  ambiente        Ambiente @relation(fields: [ambienteId], references: [id], onDelete: Cascade)
+  nome            String
+  tipoId          String
+  L               Float
+  A               Float
+  P               Float
+  nPortas         Int      @default(0)
+  materialCaixaId String
+  materialPortaId String?
+  materialFundoId String?
+  /// Só os parâmetros de regra sobrescritos neste módulo
+  regras          Json     @default("{}")
+  extras          Json     @default("{}")
+  ordem           Int      @default(0)
+  pecas           Peca[]
+
+  @@index([empresaId, ambienteId])
+}
+
+model Peca {
+  id                  String     @id @default(cuid())
+  empresaId           String
+  ambienteId          String
+  ambiente            Ambiente   @relation(fields: [ambienteId], references: [id], onDelete: Cascade)
+  moduloId            String?
+  modulo              Modulo?    @relation(fields: [moduloId], references: [id], onDelete: Cascade)
+  origem              OrigemPeca
+  nome                String
+  tipo                String     @default("outro")
+  comprimento         Float
+  largura             Float
+  espessura           Float
+  quantidade          Int
+  materialId          String
+  material            Material   @relation(fields: [materialId], references: [id])
+  /// [X superior, X inferior, Y esquerda, Y direita] em mm
+  fita                Float[]
+  podeGirar           Boolean    @default(true)
+  materialAlternativo Boolean    @default(false)
+  promobId            String?
+  ordem               Int        @default(0)
+
+  @@index([empresaId, ambienteId])
+}
+
+/// Versão de plano de corte de um projeto. As árvores de corte e a cópia das peças ficam em JSON,
+/// para que etiquetas e .prog continuem fiéis ao plano mesmo que as peças mudem depois.
+model PlanoDeCorte {
+  id            String      @id @default(cuid())
+  empresaId     String
+  projetoId     String
+  projeto       Projeto     @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  versao        Int
+  status        StatusPlano @default(ATUAL)
+  /// ParametrosCorte usados
+  parametros    Json
+  /// ChapaPlano[]
+  chapas        Json
+  /// Peca[] (cópia no momento da otimização)
+  pecas         Json
+  /// Material[] (cópia no momento da otimização)
+  materiais     Json
+  criadoPorId   String
+  criadoEm      DateTime    @default(now())
+
+  @@unique([projetoId, versao])
+  @@index([empresaId, projetoId])
+}

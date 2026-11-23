@@ -5,6 +5,8 @@ import type { NextConfig } from 'next';
 config({ path: '../../.env', quiet: true });
 
 const nextConfig: NextConfig = {
+  // Permite um segundo servidor (testes ponta a ponta) sem disputar a pasta .next
+  distDir: process.env.NEXT_DIST_DIR ?? '.next',
   // Pacotes do monorepo são publicados como TypeScript (src/*.ts)
   transpilePackages: [
     '@pro-cutter/core',

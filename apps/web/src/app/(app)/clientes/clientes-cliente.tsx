@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import { Pencil, Phone, Plus, Search } from 'lucide-react';
+import { useState } from 'react';
+import { Pencil, Phone, Plus } from 'lucide-react';
 import { BotaoExcluir } from '@/components/app/confirmar';
 import { Campo, useAcao } from '@/components/app/form';
 import { Button } from '@/components/ui/button';
@@ -32,34 +31,6 @@ export interface ClienteLista {
   nome: string;
   telefone: string;
   projetos: number;
-}
-
-/** Busca que atualiza a URL (?q=) enquanto digita, com pequeno atraso. */
-export function Busca({ inicial }: { inicial: string }) {
-  const [q, setQ] = useState(inicial);
-  const router = useRouter();
-  const pathname = usePathname();
-  useEffect(() => {
-    if (q === inicial) return;
-    const t = setTimeout(() => {
-      router.replace(q ? `${pathname}?q=${encodeURIComponent(q)}` : pathname);
-    }, 250);
-    return () => clearTimeout(t);
-  }, [q, inicial, pathname, router]);
-
-  return (
-    <div className="relative max-w-sm">
-      <Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
-      <Input
-        type="search"
-        placeholder="Buscar por nome ou telefone"
-        aria-label="Buscar clientes"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        className="pl-8"
-      />
-    </div>
-  );
 }
 
 export function ListaClientes({ clientes, busca }: { clientes: ClienteLista[]; busca: string }) {
@@ -135,11 +106,14 @@ export function DialogoCliente({
   nomeInicial,
   aoSalvar,
   gatilho,
+  children,
 }: {
   cliente?: ClienteLista;
   nomeInicial?: string;
   aoSalvar?: (c: ClienteSalvo) => void;
   gatilho?: React.ReactElement;
+  /** Conteúdo do botão quando `gatilho` é informado. */
+  children?: React.ReactNode;
 }) {
   const [aberto, setAberto] = useState(false);
   const [nome, setNome] = useState('');
@@ -172,7 +146,9 @@ export function DialogoCliente({
           ))
         }
       >
-        {gatilho ? undefined : cliente ? (
+        {gatilho ? (
+          children
+        ) : cliente ? (
           <Pencil />
         ) : (
           <>

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Users } from 'lucide-react';
 import { Cabecalho, EstadoVazio } from '@/components/app/cabecalho';
 import { dbDoUsuario } from '@/lib/server/sessao';
-import { Busca, DialogoCliente, ListaClientes } from './clientes-cliente';
+import { Busca } from '@/components/app/busca';
+import { DialogoCliente, ListaClientes } from './clientes-cliente';
 
 export const metadata: Metadata = { title: 'Clientes' };
 
@@ -43,7 +44,11 @@ export default async function PaginaClientes({ searchParams }: PageProps<'/clien
           />
         ) : (
           <>
-            <Busca inicial={busca} />
+            <Busca
+              inicial={busca}
+              rotulo="Buscar clientes"
+              placeholder="Buscar por nome ou telefone"
+            />
             <ListaClientes
               clientes={clientes.map((c) => ({
                 id: c.id,

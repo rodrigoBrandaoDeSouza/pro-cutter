@@ -1,0 +1,1644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LISTING LANG="pt-BR" ASSISTANCEORDER="N" CUSTOMERNUMBER="693" ID="Listagem_montados" DESCRIPTION="Listagem-Montado" DATE="19/11/2026" HOUR="16:40:13" CLIENTLOGO="C:\ProgramData\Procad\Promob Plus Professional (2448)\Budget\Logotype\logo vermelha.jpg" CURRENCYSYMBOL="R$" IDTYPE="Listagem_montados" UNIT="MM" AMBIENTS="3\0" QUANTITYINCREASE="N" DEFAULTPRICETABLEUSED="Y" PRICETABLEUSED="" ONLYSELECTEDITEMS="N" ALLOWSUPPLEMENTARYITEMS="Y" ALLOWEXTRAITEMS="Y" HASNOTAVAILABLEITEMS="N" HASCHANGEDDIMENSIONITEMS="N" AREASPROCESSED="N" TRANSLATEDESCRIPTIONS="N" SERIALIZEATTRIBUTES="N">
+  <PROJECTGUID GUID="98773737-43bf-439b-a414-d8d181e123e2" />
+  <ABOUTPROMOB VERSION="5" REVISION="60" BUILD="50" SYSTEM="Professional" SYSTEMID="2448" DISTRIBUTION="Plus" SERIALNUMBER="69261154" PRODUCTCODE="SKCSAS6K27" CUSTOMERNUMBER="717" SYSTEMREVISION="16/11/2026 16:44:21">
+    <LIBRARIES>
+      <LIBRARY LINE="Sulfer" REVISION="20.01" VERSION="1" />
+      <LIBRARY LINE="LG" REVISION="16.01" VERSION="1" />
+      <LIBRARY LINE="masotti" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Vitralle" REVISION="25.08" VERSION="1" />
+      <LIBRARY LINE="LIF_1158" REVISION="Setembro/2017" VERSION="2017" />
+      <LIBRARY LINE="Tramontina" REVISION="Janeiro/2024" VERSION="Janeiro/2024" />
+      <LIBRARY LINE="Sunlux" REVISION="24.03" VERSION="1" />
+      <LIBRARY LINE="fischer" REVISION="19.01" VERSION="1" />
+      <LIBRARY LINE="Invita" REVISION="Agosto/2023" VERSION="Agosto/2023" />
+      <LIBRARY LINE="pux_tor" REVISION="24.14" VERSION="1" />
+      <LIBRARY LINE="Eucatex" REVISION="Outubro/2026" VERSION="Outubro/2026" />
+      <LIBRARY LINE="Extra_Glass" REVISION="Janeiro/2026" VERSION="Janeiro/2026" />
+      <LIBRARY LINE="sis_dur" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="East_Glass" REVISION="21.02" VERSION="1" />
+      <LIBRARY LINE="revest" REVISION="" VERSION="" />
+      <LIBRARY LINE="omega_viratto" REVISION="18.01" VERSION="1" />
+      <LIBRARY LINE="Pigmento_Laqueados" REVISION="Janeiro/2025" VERSION="Janeiro/2025" />
+      <LIBRARY LINE="esquadrimed" REVISION="14.02" VERSION="1" />
+      <LIBRARY LINE="bibliotecas" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="Gaya_Iluminacao" REVISION="Maio/2024" VERSION="Maio/2024" />
+      <LIBRARY LINE="tra_mov" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="WURTH" REVISION="23.01" VERSION="1" />
+      <LIBRARY LINE="Pux_usitop" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Lucap" REVISION="19.01" VERSION="1" />
+      <LIBRARY LINE="escritorios" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="SAS_Plastic" REVISION="19.01" VERSION="1" />
+      <LIBRARY LINE="rubinettos" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="decore" REVISION="" VERSION="" />
+      <LIBRARY LINE="amma1192" REVISION="15.03" VERSION="1" />
+      <LIBRARY LINE="cad_cad" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Siforma_6034" REVISION="23.01" VERSION="1" />
+      <LIBRARY LINE="Orange_Bed" REVISION="21.01" VERSION="1" />
+      <LIBRARY LINE="cozinhas" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="Cata" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Revoled" REVISION="24.01" VERSION="Novembro/2023" />
+      <LIBRARY LINE="cinex" REVISION="13.01" VERSION="1" />
+      <LIBRARY LINE="cozinhas_cava" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="Metal_House" REVISION="Outubro/2024" VERSION="Outubro/2024" />
+      <LIBRARY LINE="salas" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="Rafex" REVISION="Julho/2025" VERSION="Julho/2025" />
+      <LIBRARY LINE="panizzi" REVISION="22.01" VERSION="1" />
+      <LIBRARY LINE="origin" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="pux_obi" REVISION="23.03" VERSION="1" />
+      <LIBRARY LINE="Led_Line" REVISION="Fevereiro/2025" VERSION="Fevereiro/2025" />
+      <LIBRARY LINE="persol" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Rometal" REVISION="20.01" VERSION="1" />
+      <LIBRARY LINE="puxadores" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="casavitra" REVISION="14.02" VERSION="1" />
+      <LIBRARY LINE="sis_cos" REVISION="20.01" VERSION="1" />
+      <LIBRARY LINE="VON_ORT" REVISION="Setembro/2024" VERSION="Setembro/2024" />
+      <LIBRARY LINE="2468_Dimec" REVISION="Setembro/2026" VERSION="Setembro/2026" />
+      <LIBRARY LINE="franke" REVISION="Março/2025" VERSION="Março/2025" />
+      <LIBRARY LINE="Tabone" REVISION="Novembro/2025" VERSION="Novembro/2025" />
+      <LIBRARY LINE="est_3649" REVISION="Maio/2024" VERSION="Maio/2024" />
+      <LIBRARY LINE="Ezdoor" REVISION="17.05" VERSION="1" />
+      <LIBRARY LINE="Fle1198" REVISION="16.13" VERSION="1" />
+      <LIBRARY LINE="acessorios" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="sis_con" REVISION="21.01" VERSION="1" />
+      <LIBRARY LINE="mad_mad" REVISION="18.01" VERSION="1" />
+      <LIBRARY LINE="De_Bacco" REVISION="Março/2026" VERSION="Março/2026" />
+      <LIBRARY LINE="Criativa_Puxadores" REVISION="Maio/2026" VERSION="Maio/2026" />
+      <LIBRARY LINE="puxadores_par" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="brastemp" REVISION="14.02" VERSION="1" />
+      <LIBRARY LINE="DP_Portas" REVISION="Julho/2026" VERSION="Julho/2026" />
+      <LIBRARY LINE="Villaggio" REVISION="16.01" VERSION="1" />
+      <LIBRARY LINE="portabille" REVISION="20.02" VERSION="1" />
+      <LIBRARY LINE="leo_3025" REVISION="Abril/2026" VERSION="Abril/2026" />
+      <LIBRARY LINE="Artetilica" REVISION="Agosto/2026" VERSION="Agosto/2026" />
+      <LIBRARY LINE="accord_Iluminacao" REVISION="15.01" VERSION="1" />
+      <LIBRARY LINE="altero" REVISION="19.01" VERSION="1" />
+      <LIBRARY LINE="dub_com" REVISION="Novembro/2023" VERSION="Novembro/2023" />
+      <LIBRARY LINE="Alumiglass" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Alternativa_Componentes" REVISION="Dezembro/2025" VERSION="Dezembro/2025" />
+      <LIBRARY LINE="Aluni_Portas" REVISION="Janeiro/2024" VERSION="Janeiro/2024" />
+      <LIBRARY LINE="Tecnovidro" REVISION="24.01" VERSION="1" />
+      <LIBRARY LINE="tidelli" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="omp" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="elettromec" REVISION="Agosto/2024" VERSION="Agosto/2024" />
+      <LIBRARY LINE="Dutotec_2167" REVISION="18.01" VERSION="1" />
+      <LIBRARY LINE="ancezki" REVISION="Janeiro/2016" VERSION="1" />
+      <LIBRARY LINE="bosch" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Imperio_do_Marceneiro" REVISION="julho/2024" VERSION="Julho/2024" />
+      <LIBRARY LINE="mekal" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="pux_zen" REVISION="Novembro/2025" VERSION="Novembro/2025" />
+      <LIBRARY LINE="sai_cla" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="ron" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="ele_ele" REVISION="21.01" VERSION="1" />
+      <LIBRARY LINE="Soldax" REVISION="Outubro/2023" VERSION="Outubro/2023" />
+      <LIBRARY LINE="Sta_Blu" REVISION="" VERSION="" />
+      <LIBRARY LINE="dormitorios" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="wp" REVISION="16.03" VERSION="1" />
+      <LIBRARY LINE="mabe" REVISION="14.02" VERSION="1" />
+      <LIBRARY LINE="Vort" REVISION="22.01" VERSION="1" />
+      <LIBRARY LINE="Adipar" REVISION="Março/2025" VERSION="Março/2025" />
+      <LIBRARY LINE="blum" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Orgabox" REVISION="Dezembro/2025" VERSION="Dezembro/2025" />
+      <LIBRARY LINE="banheiros" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="Gre_3480" REVISION="Março/2026" VERSION="Março/2026" />
+      <LIBRARY LINE="sofisticato" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="mueller" REVISION="21.01" VERSION="1" />
+      <LIBRARY LINE="Jador" REVISION="Dezembro/2025" VERSION="Dezembro/2025" />
+      <LIBRARY LINE="Cosentino" REVISION="22.02" VERSION="1" />
+      <LIBRARY LINE="perlare" REVISION="Agosto/2023" VERSION="2023" />
+      <LIBRARY LINE="reval" REVISION="13.01" VERSION="1" />
+      <LIBRARY LINE="Aramados Jomer" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="reativa" REVISION="19.01" VERSION="1" />
+      <LIBRARY LINE="Duoz_Organizadores" REVISION="Setembro/2023" VERSION="Setembro/2023" />
+      <LIBRARY LINE="hettich" REVISION="15.01" VERSION="1" />
+      <LIBRARY LINE="Hafele" REVISION="15.04" VERSION="1" />
+      <LIBRARY LINE="estofados" REVISION="26.05" VERSION="1" />
+      <LIBRARY LINE="lofra" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Masutti_Copat" REVISION="Outubro/2023" VERSION="Outubro/2023" />
+      <LIBRARY LINE="Metal_Design" REVISION="15.01" VERSION="1" />
+      <LIBRARY LINE="smeg" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="arix" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="crissair" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="falmec" REVISION="Julho/2023" VERSION="Julho/2023" />
+      <LIBRARY LINE="brasilpost" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="incomaq" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="cla_a_lar_" REVISION="19.02" VERSION="1" />
+      <LIBRARY LINE="Reflexo_Glass" REVISION="20.01" VERSION="1" />
+      <LIBRARY LINE="DT_Vidros" REVISION="Setembro/2023" VERSION="Setembro/2023" />
+      <LIBRARY LINE="Italyline" REVISION="Junho/2026" VERSION="Junho/2026" />
+      <LIBRARY LINE="mim_2783" REVISION="21.01" VERSION="1" />
+      <LIBRARY LINE="neo" REVISION="05-2025" VERSION="05-2025" />
+      <LIBRARY LINE="Perfar" REVISION="Abril/2023" VERSION="Abril/2023" />
+      <LIBRARY LINE="salvatore" REVISION="14.02" VERSION="1" />
+      <LIBRARY LINE="fgv" REVISION="23.01" VERSION="1" />
+      <LIBRARY LINE="consul" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Scheer_Churrasqueiras" REVISION="Abril/2025" VERSION="Abril/2025" />
+      <LIBRARY LINE="suggar" REVISION="14.01" VERSION="1" />
+      <LIBRARY LINE="Alpam" REVISION="Outubro/2025" VERSION="Outubro/2025" />
+    </LIBRARIES>
+  </ABOUTPROMOB>
+  <CUSTOMERSDATA>
+    <DATA ID="ModifiedOn" VALUE="19/11/2026 19:35:20" />
+    <DATA ID="codcliente" VALUE="" />
+    <DATA ID="nomecliente" VALUE="Everaldo" />
+    <DATA ID="rep_contatoempresa" VALUE="" />
+    <DATA ID="rep_codempresa" VALUE="" />
+    <DATA ID="corporateName" VALUE="Everaldo" />
+    <DATA ID="rep_bairroempresa" VALUE="" />
+    <DATA ID="customerObservation" VALUE="" />
+    <DATA ID="email" VALUE="e@e.com" />
+    <DATA ID="uf" VALUE="" />
+    <DATA ID="rep_telefoneempresa" VALUE="" />
+    <DATA ID="Environment" VALUE="Cozinha" />
+    <DATA ID="rep_nomeempresa" VALUE="" />
+    <DATA ID="rep_cnpjempresa" VALUE="" />
+    <DATA ID="observacoes" VALUE="" />
+    <DATA ID="cpfcnpj" VALUE="" />
+    <DATA ID="rep_cepenpresa" VALUE="" />
+    <DATA ID="email_Private_0" VALUE="e@e.com" />
+    <DATA ID="cidade" VALUE="" />
+    <DATA ID="bairro" VALUE="" />
+    <DATA ID="endereco" VALUE="" />
+    <DATA ID="custom_field1" VALUE="" />
+    <DATA ID="DeliveryDate" VALUE="" />
+    <DATA ID="cep" VALUE="" />
+    <DATA ID="frete" VALUE="" />
+    <DATA ID="rep_cidadeempresa" VALUE="" />
+    <DATA ID="customerType" VALUE="Physical" />
+    <DATA ID="nickName" VALUE="" />
+    <DATA ID="rep_ufempresa" VALUE="" />
+    <DATA ID="rep_enderecoempresa" VALUE="" />
+    <DATA ID="rep_teste1" VALUE="" />
+    <DATA ID="phone_Mobile_0" VALUE="55|45999999999" />
+    <DATA ID="rep_emailempresa" VALUE="" />
+    <DATA ID="ClosingDate" VALUE="" />
+    <DATA ID="Situation" VALUE="Em andamento" />
+    <DATA ID="celular" VALUE="45999999999" />
+    <DATA ID="Type" VALUE="Principal" />
+    <DATA ID="dateOfBirth" VALUE="" />
+    <DATA ID="endentrega" VALUE="" />
+    <DATA ID="Stage" VALUE="Prospecção" />
+    <DATA ID="CreatedOn" VALUE="29/10/2026 12:08:26" />
+    <DATA ID="fone" VALUE="" />
+  </CUSTOMERSDATA>
+  <TOTALPRICES />
+  <AMBIENTS>
+    <AMBIENT GUID="eb308cfc-0370-4ce3-a93e-cabcb68131f3" DESCRIPTION="Projeto - cozinha Everaldo Gobbi" UNIQUEID="3\0">
+      <TOTALPRICES />
+      <MODELINFORMATIONS>
+        <MODELCATEGORYINFORMATIONS>
+          <MODELCATEGORYINFORMATION DESCRIPTION="Cozinhas">
+            <MODELINFORMATIONS>
+              <MODELINFORMATION DESCRIPTION="Externo Caixas" ID="coz_mod_caixas_ext">
+                <MODELTYPEINFORMATIONS>
+                  <MODELTYPEINFORMATION DESCRIPTION="Cores&gt;Branco" ID="coz_mod_cores_ext;coz_branco" />
+                  <MODELTYPEINFORMATION DESCRIPTION="Fibraplac&gt;Conceito\Horizontal\Linho Fendi" ID="coz_ass_fib_ext;coz_ass_fib_ele_h_lin_fen" />
+                </MODELTYPEINFORMATIONS>
+              </MODELINFORMATION>
+              <MODELINFORMATION DESCRIPTION="Caixas" ID="coz_mod_caixas_int">
+                <MODELTYPEINFORMATIONS>
+                  <MODELTYPEINFORMATION DESCRIPTION="Cores&gt;Branco" ID="coz_mod_cores_int;coz_branco" />
+                  <MODELTYPEINFORMATION DESCRIPTION="Fibraplac&gt;Conceito\Horizontal\Linho Fendi" ID="coz_ass_cai_fib_int;coz_ass_fib_ele_h_lin_fen" />
+                </MODELTYPEINFORMATIONS>
+              </MODELINFORMATION>
+              <MODELINFORMATION DESCRIPTION="Fita Borda Caixas" ID="coz_fita_borda_caixas">
+                <MODELTYPEINFORMATIONS>
+                  <MODELTYPEINFORMATION DESCRIPTION="Cores&gt;Branco" ID="coz_mod_cores_fita;coz_branco" />
+                  <MODELTYPEINFORMATION DESCRIPTION="Fibraplac&gt;Conceito\Linho Fendi" ID="coz_ass_cai_fib_fita;coz_ass_fib_ele_h_lin_fen" />
+                </MODELTYPEINFORMATIONS>
+              </MODELINFORMATION>
+              <MODELINFORMATION DESCRIPTION="Fita Borda Frontal Caixas" ID="coz_fita_fro_borda_caixas">
+                <MODELTYPEINFORMATIONS>
+                  <MODELTYPEINFORMATION DESCRIPTION="Cores&gt;Branco" ID="coz_mod_cores_fita_fro;coz_branco" />
+                  <MODELTYPEINFORMATION DESCRIPTION="Fibraplac&gt;Conceito\Linho Fendi" ID="coz_ass_por_fib_fita;coz_ass_fib_ele_h_lin_fen" />
+                </MODELTYPEINFORMATIONS>
+              </MODELINFORMATION>
+            </MODELINFORMATIONS>
+          </MODELCATEGORYINFORMATION>
+        </MODELCATEGORYINFORMATIONS>
+      </MODELINFORMATIONS>
+      <CATEGORIES>
+        <CATEGORY DESCRIPTION="Cozinhas">
+          <TOTALPRICES />
+          <ITEMS>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="3" QUANTITY="0.08" WIDTH="240" HEIGHT="15" DEPTH="315" TEXTDIMENSION="240 x 15 x 315" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9555" UNIQUEPARENTID="-2" GUID="d96df211-7332-4e2f-9d47-ac431e7a986d" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9555;9553;9554" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.08" WIDTH="240" HEIGHT="15" DEPTH="330" TEXTDIMENSION="240 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9551" UNIQUEPARENTID="-2" GUID="a06da576-0893-4844-b79c-37e2aabc8fe5" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9551;9550" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.09" WIDTH="150" HEIGHT="15" DEPTH="550" TEXTDIMENSION="150 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9488" UNIQUEPARENTID="-2" GUID="f884290d-1eab-4be6-9bc3-f114a89739fb" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.11" WIDTH="325" HEIGHT="15" DEPTH="330" TEXTDIMENSION="325 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9571" UNIQUEPARENTID="-2" GUID="a6751faa-8bd8-4aff-89f6-91d395c16466" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.21" WIDTH="775" HEIGHT="15" DEPTH="260" TEXTDIMENSION="775 x 15 x 260" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9547" UNIQUEPARENTID="-2" GUID="9f29f854-9d67-44b8-86d1-8f5eaade94d8" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.22" WIDTH="660" HEIGHT="15" DEPTH="330" TEXTDIMENSION="660 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9573" UNIQUEPARENTID="-2" GUID="c0073c27-9532-449e-b674-20ce761af452" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9573;9572" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="5" QUANTITY="0.23" WIDTH="710" HEIGHT="15" DEPTH="315" TEXTDIMENSION="710 x 15 x 315" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9565" UNIQUEPARENTID="-2" GUID="4391d9ca-9589-4511-ade0-0ae858c83fd9" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9565;9561;9562;9563;9564" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.25" WIDTH="740" HEIGHT="15" DEPTH="330" TEXTDIMENSION="740 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9557" UNIQUEPARENTID="-2" GUID="7324d9b7-730e-4af8-81f0-e4ea6aa8758b" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9557;9556" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.26" WIDTH="780" HEIGHT="15" DEPTH="330" TEXTDIMENSION="780 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9535" UNIQUEPARENTID="-2" GUID="4a2c70cc-c60e-4e65-8846-5d7e9b449bcd" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9535;9534" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.3" WIDTH="880" HEIGHT="15" DEPTH="330" TEXTDIMENSION="880 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9545" UNIQUEPARENTID="-2" GUID="2c029dee-1e9b-457f-a2b6-becf65208e24" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.34" WIDTH="1030" HEIGHT="15" DEPTH="330" TEXTDIMENSION="1030 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9526" UNIQUEPARENTID="-2" GUID="de904063-33d3-4532-86a1-cd9951fa363f" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9526;9525" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.36" WIDTH="650" HEIGHT="15" DEPTH="550" TEXTDIMENSION="650 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9519" UNIQUEPARENTID="-2" GUID="3fb543c6-1bad-4d7a-9e9a-9bd670fbc839" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.37" WIDTH="755" HEIGHT="15" DEPTH="480" TEXTDIMENSION="755 x 15 x 480" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9524" UNIQUEPARENTID="-2" GUID="16ea54f3-a95d-4c81-bf45-e096eda89772" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.42" WIDTH="750" HEIGHT="15" DEPTH="550" TEXTDIMENSION="750 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9523" UNIQUEPARENTID="-2" GUID="b2aad0aa-9bb3-4d68-941f-3b05b32402a6" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.56" WIDTH="1670" HEIGHT="15" DEPTH="330" TEXTDIMENSION="1670 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9539" UNIQUEPARENTID="-2" GUID="0eaea255-e30b-402a-86f4-69b6b274c8e0" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9539;9538" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.86" WIDTH="1550" HEIGHT="15" DEPTH="550" TEXTDIMENSION="1550 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9476" UNIQUEPARENTID="-2" GUID="b716bc2a-ea24-43d9-b3ca-e6d5e9008b7a" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_bas_bas_2015" DESCRIPTION="Base 15" OBSERVATIONS="" REFERENCE="1.2006.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="1.05" WIDTH="1900" HEIGHT="15" DEPTH="550" TEXTDIMENSION="1900 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Bases" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\bases\base.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9514" UNIQUEPARENTID="-2" GUID="f1d65581-4ada-496f-887b-5e294455f9af" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2006.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0.4" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.05" WIDTH="650" HEIGHT="15" DEPTH="70" TEXTDIMENSION="650 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9480" UNIQUEPARENTID="-2" GUID="83a57d34-4968-4cb8-88d5-fdf8a0dc72e9" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.05" WIDTH="680" HEIGHT="15" DEPTH="70" TEXTDIMENSION="680 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9541" UNIQUEPARENTID="-2" GUID="2db5c88b-5c26-4ae0-b038-9bee0af29851" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.08" WIDTH="650" HEIGHT="15" DEPTH="120" TEXTDIMENSION="650 x 15 x 120" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9491" UNIQUEPARENTID="-2" GUID="19b0a05d-e439-45fc-b970-e9d0d1f9d675" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="4" QUANTITY="0.12" WIDTH="250" HEIGHT="15" DEPTH="465" TEXTDIMENSION="250 x 15 x 465" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9511" UNIQUEPARENTID="-2" GUID="29570846-7ead-424c-a4b7-d99387dcb418" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9511;9505;9504;9510" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.17" WIDTH="680" HEIGHT="15" DEPTH="240" TEXTDIMENSION="680 x 15 x 240" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9552" UNIQUEPARENTID="-2" GUID="cb6535a5-4888-44e6-9ff4-6c9e63d99385" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.17" WIDTH="230" HEIGHT="15" DEPTH="730" TEXTDIMENSION="230 x 15 x 730" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9512" UNIQUEPARENTID="-2" GUID="8282e5f2-9465-4586-9129-8e19a2f32ab6" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9512;9506" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.18" WIDTH="245" HEIGHT="15" DEPTH="730" TEXTDIMENSION="245 x 15 x 730" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9513" UNIQUEPARENTID="-2" GUID="fd9bd4ee-0161-479b-9318-e7da57080c81" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9513;9507" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.19" WIDTH="570" HEIGHT="15" DEPTH="330" TEXTDIMENSION="570 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9533" UNIQUEPARENTID="-2" GUID="2bf5eb9b-b338-49aa-a3e0-5baaa32efc3b" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9533;9532" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="4" QUANTITY="0.23" WIDTH="680" HEIGHT="15" DEPTH="330" TEXTDIMENSION="680 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9570" UNIQUEPARENTID="-2" GUID="49a98920-2f1a-4613-865d-37112086d2f4" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9570;9527;9529;9543" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.23" WIDTH="680" HEIGHT="15" DEPTH="330" TEXTDIMENSION="680 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9540" UNIQUEPARENTID="-2" GUID="32db78bf-c816-4ed1-81a6-99faf8f56bf9" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.24" WIDTH="710" HEIGHT="15" DEPTH="330" TEXTDIMENSION="710 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9549" UNIQUEPARENTID="-2" GUID="2fc9429b-5917-47f4-adac-36fe2923c65c" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9549;9548" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.24" WIDTH="710" HEIGHT="15" DEPTH="330" TEXTDIMENSION="710 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9537" UNIQUEPARENTID="-2" GUID="0795cdd7-2fb1-4fe1-aa3b-8d683c4c94c7" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9537;9536" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.24" WIDTH="635" HEIGHT="15" DEPTH="370" TEXTDIMENSION="635 x 15 x 370" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9479" UNIQUEPARENTID="-2" GUID="80ffd809-0c7c-4cb5-a5af-b694e4101902" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Branco.MDF" UNIT="M2" REPETITION="7" QUANTITY="0.36" WIDTH="650" HEIGHT="15" DEPTH="550" TEXTDIMENSION="650 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9515" UNIQUEPARENTID="-2" GUID="a9b60a0d-1e7b-4dcc-a1f2-ff546db39fbe" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9515;9477;9478;9486;9495;9496;9497" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Branco" />
+                <MODEL_EXT REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_EXT REFERENCE="" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Branco" />
+                <LINE_EXT REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.36" WIDTH="650" HEIGHT="15" DEPTH="550" TEXTDIMENSION="650 x 15 x 550" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9490" UNIQUEPARENTID="-2" GUID="c230e8ff-5777-46a2-bce0-ba0ab8c9e1a2" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9490;9489" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.72" WIDTH="2180" HEIGHT="15" DEPTH="330" TEXTDIMENSION="2180 x 15 x 330" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9559" UNIQUEPARENTID="-2" GUID="ceea2ad4-6bb6-4b72-b7f5-5ec18260979a" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9559;9558" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_lat_lat_2015" DESCRIPTION="Lateral 15" OBSERVATIONS="" REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="1.55" WIDTH="2180" HEIGHT="15" DEPTH="710" TEXTDIMENSION="2180 x 15 x 710" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Laterais/Divisórias" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\laterais\lateral.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9560" UNIQUEPARENTID="-2" GUID="6f4928c5-21e6-4277-966b-d6e04947405f" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2001.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <TYPE REFERENCE="" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MODEL_EXT REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0.4" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <TAMPO REFERENCE="True" />
+                <POSICAO REFERENCE="Dir" />
+                <RODAPE REFERENCE="True" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_EXT REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_EXT REFERENCE="Linho Fendi" />
+                <LINE_EXT REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.01" WIDTH="120" HEIGHT="15" DEPTH="70" TEXTDIMENSION="120 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9493" UNIQUEPARENTID="-2" GUID="813eee5f-ce9c-4e10-ac82-7a21b916d852" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.01" WIDTH="120" HEIGHT="15" DEPTH="70" TEXTDIMENSION="120 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9492" UNIQUEPARENTID="-2" GUID="abe007f7-e3f9-4107-a803-a00a673d6307" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.03" WIDTH="370" HEIGHT="15" DEPTH="70" TEXTDIMENSION="370 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9481" UNIQUEPARENTID="-2" GUID="c53ff283-d0e4-42d8-9063-53fe810d2015" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Branco.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.08" WIDTH="1135" HEIGHT="15" DEPTH="70" TEXTDIMENSION="1135 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9502" UNIQUEPARENTID="-2" GUID="93f8a543-5d0e-4546-bbbf-20b0b4e104f5" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.08" WIDTH="1135" HEIGHT="15" DEPTH="70" TEXTDIMENSION="1135 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9484" UNIQUEPARENTID="-2" GUID="3da566c8-6fa9-4eae-a845-942a9a3bfd3c" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Branco.MDF" UNIT="M2" REPETITION="2" QUANTITY="0.11" WIDTH="1520" HEIGHT="15" DEPTH="70" TEXTDIMENSION="1520 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9483" UNIQUEPARENTID="-2" GUID="e2d94565-590b-44ee-98a5-6fc66a509189" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9483;9482" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Branco.MDF" UNIT="M2" REPETITION="3" QUANTITY="0.14" WIDTH="1870" HEIGHT="15" DEPTH="70" TEXTDIMENSION="1870 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9503" UNIQUEPARENTID="-2" GUID="6ae44200-8c4d-4ef5-a0ff-ccdd68073067" INVERTED="" PLATECUTTINGROTATE="NONE" RULE="M2">
+              <SHAPE />
+              <METADATAS>
+                <METADATA ID="UniqueIdCollection" VALUE="9503;9499;9500" />
+              </METADATAS>
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Branco.MDF" />
+                <PRICE REFERENCE="15.Branco.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Branco" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="" />
+                <MODEL_DESCRIPTION REFERENCE="Branco" />
+                <LINE REFERENCE="Cores" />
+                <SUPPLIER_FITA REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Branco" />
+                <LINE_FITA REFERENCE="Cores" />
+                <SUPPLIER_FITA_FRO REFERENCE="" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Branco" />
+                <LINE_FITA_FRO REFERENCE="Cores" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+            <ITEM ID="coz_comp_sar_sar_2015" DESCRIPTION="Sarrafo 15mm" OBSERVATIONS="" REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" UNIT="M2" REPETITION="1" QUANTITY="0.14" WIDTH="1870" HEIGHT="15" DEPTH="70" TEXTDIMENSION="1870 x 15 x 70" COMPONENT="Y" STRUCTURE="N" FAMILY="Cozinhas" GROUP="Sarrafos" ISGEOMETRY="N" ISAGGREGATEGROUP="N" IMAGE="%PastaSistema%\Bibliotecas\Cozinhas\Composicao NOVO\sarrafos\sarrafo.jpg" EXPLODEDIMAGE="" EXPLODEDIMAGECAPTION="" RULEQUANTITYINCREASE="N" SHOWPRICE="Y" RULEQUANTITYINCREASEPERCENT="0" IDPRICEPROVIDER="Plus" IDPRICESOURCE="BancoDados" IDPRICETABLE="" PRICECANMODIFY="Y" UNIQUEID="9501" UNIQUEPARENTID="-2" GUID="e86afdfa-626b-450c-930e-6bec80954a10" INVERTED="" PLATECUTTINGROTATE="N" RULE="M2">
+              <SHAPE />
+              <REFERENCES>
+                <COMPLETE REFERENCE="1.2020.15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <PRICE REFERENCE="15.Fibraplac.Conceito.Linho Fendi.MDF" />
+                <MATERIAL REFERENCE="MDF" />
+                <MODEL REFERENCE="Fibraplac.Conceito.Linho Fendi" />
+                <MAXWIDTH REFERENCE="2750" />
+                <MAXDEPTH REFERENCE="1830" />
+                <THICKNESS REFERENCE="15" />
+                <FITA_BORDA_1 REFERENCE="0" />
+                <FITA_BORDA_2 REFERENCE="0" />
+                <FITA_BORDA_3 REFERENCE="0" />
+                <FITA_BORDA_4 REFERENCE="0" />
+                <SUPPLIER REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION REFERENCE="Linho Fendi" />
+                <LINE REFERENCE="Conceito" />
+                <SUPPLIER_FITA REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA REFERENCE="Linho Fendi" />
+                <LINE_FITA REFERENCE="Conceito" />
+                <SUPPLIER_FITA_FRO REFERENCE="Fibraplac" />
+                <MODEL_DESCRIPTION_FITA_FRO REFERENCE="Linho Fendi" />
+                <LINE_FITA_FRO REFERENCE="Conceito" />
+                <LARGURA_CHAPA REFERENCE="YYY" />
+                <ALTURA_CHAPA REFERENCE="OOO" />
+              </REFERENCES>
+            </ITEM>
+          </ITEMS>
+        </CATEGORY>
+      </CATEGORIES>
+    </AMBIENT>
+  </AMBIENTS>
+</LISTING>

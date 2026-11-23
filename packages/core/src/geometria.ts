@@ -86,7 +86,9 @@ function subdividir(
     if (fim < limite) g.cortes.push({ nivel: no.nivel, eixo, pos: fim, de, ate, refilo: false });
 
     const filho: Regiao =
-      eixo === 'X' ? { x: p, y: r.y, c: no.medida, l: r.l } : { x: r.x, y: p, c: r.c, l: no.medida };
+      eixo === 'X'
+        ? { x: p, y: r.y, c: no.medida, l: r.l }
+        : { x: r.x, y: p, c: r.c, l: no.medida };
 
     if (no.filhos.length > 0) subdividir(filho, no.filhos, no.refiloFilhos ?? 0, op, g);
     else if (no.pecaId !== undefined) g.pecas.push({ pecaId: no.pecaId, ...filho });

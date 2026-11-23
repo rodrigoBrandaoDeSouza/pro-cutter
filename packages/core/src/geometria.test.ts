@@ -26,7 +26,10 @@ const chapaSimples: ChapaPlano = {
 };
 
 describe('posicionar', () => {
-  const g = posicionar(chapaSimples, { serra: SERRA, sobraMinima: { comprimento: 300, largura: 300 } });
+  const g = posicionar(chapaSimples, {
+    serra: SERRA,
+    sobraMinima: { comprimento: 300, largura: 300 },
+  });
 
   it('posiciona as peças descontando refilo e serra', () => {
     expect(g.pecas).toEqual([
@@ -62,7 +65,10 @@ describe('posicionar', () => {
       nos: [{ nivel: '1Y', medida: 1600, filhos: [], pecaId: 'C' }],
       refilo: 0,
     };
-    const r = posicionar(estreita, { serra: SERRA, sobraMinima: { comprimento: 300, largura: 300 } });
+    const r = posicionar(estreita, {
+      serra: SERRA,
+      sobraMinima: { comprimento: 300, largura: 300 },
+    });
     expect(r.sobras).toEqual([{ x: 0, y: 1604, c: 2750, l: 226, util: false }]);
   });
 
@@ -91,7 +97,10 @@ describe('posicionar', () => {
         },
       ],
     };
-    const r = posicionar(colunas, { serra: SERRA, sobraMinima: { comprimento: 300, largura: 300 } });
+    const r = posicionar(colunas, {
+      serra: SERRA,
+      sobraMinima: { comprimento: 300, largura: 300 },
+    });
     expect(r.pecas).toEqual([
       { pecaId: 'base', x: 9, y: 9, c: 1550, l: 550 },
       { pecaId: 'lat', x: 14, y: 563, c: 1030, l: 330 },

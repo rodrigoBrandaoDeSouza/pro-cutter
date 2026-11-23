@@ -1,0 +1,6 @@
+chapa 1 branco: 15 pecas, aproveitamento 83.6%
+chapa 2 branco: 19 pecas, aproveitamento 90.9%
+chapa 3 branco: 13 pecas, aproveitamento 73.1%
+chapa 4 linho: 16 pecas, aproveitamento 79.6%
+chapa 5 linho: 13 pecas, aproveitamento 64.6%
+TOTAL: 5 chapas, 76 pecas, aproveitamento 78.4%

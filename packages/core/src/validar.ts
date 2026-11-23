@@ -10,6 +10,9 @@ import type {
   Plano,
 } from './tipos.ts';
 
+/** Folga para erros de ponto flutuante em somas de medidas (mm). */
+const TOLERANCIA = 1e-6;
+
 export type TipoErro =
   | 'excede'
   | 'medida'
@@ -176,7 +179,7 @@ function verificarEstrutura(chapa: ChapaPlano, serra: number, maxIdx: number, er
       }
     });
 
-    if (usado > disponivel) {
+    if (usado > disponivel + TOLERANCIA) {
       erros.push({
         tipo: 'excede',
         chapa: n,

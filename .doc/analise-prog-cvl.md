@@ -111,3 +111,12 @@ O parser [spikes/parse-prog.mjs](spikes/parse-prog.mjs) reconstrói a árvore de
 3. Para que serve `waste`: marcar sobras aproveitáveis?
 4. O supervisório exige o padrão de nome do arquivo ou só a extensão?
 5. Como os arquivos chegam na máquina hoje: pendrive, pasta de rede?
+
+## Confirmações da implementação (23/11/2026)
+
+- **Ida e volta byte a byte:** as 5 amostras lidas e regeneradas pelo `packages/cvl` saem idênticas ao original. Isso confirma as regras:
+  - refilo `R<nível>` antes do primeiro nó de cada grupo
+  - marcador `<nível>*` antes do primeiro nó subdividido que vem depois de peças finais no mesmo grupo
+  - peças finais sempre antes dos nós subdivididos
+- **Espessura da serra:** as 5 chapas só cabem com serra de **até 5,0 mm**. A chapa 001 é a limitante: estoura com 5,1 mm. O software atual usa algo ≤ 5 mm.
+- **Orientação:** o `WIDTH` do Promob vai no eixo X (`lenght`) do `.prog`. Peças com veio (Linho Fendi) nunca aparecem giradas; peças sem veio (Branco) aparecem.

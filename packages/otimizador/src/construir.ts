@@ -21,6 +21,8 @@ export interface Instancia {
   preferirGirada: boolean;
   /** Número da chapa em que a peça deve ficar (fixada pelo usuário). */
   chapaFixa?: number;
+  /** Só entra em espaço que sobrou; nunca abre chapa nova (ex.: material alternativo). */
+  opcional?: boolean;
 }
 
 interface Orientacao {
@@ -217,19 +219,34 @@ export function construir(
     return ordenarGrupo(nos);
   };
 
+  const obrigatorias = () => restantes.filter((r) => !r.opcional).length;
   const chapas: ChapaPlano[] = [];
-  while (restantes.length > 0) {
+
+  while (obrigatorias() > 0) {
     chapaAtual = chapas.length + 1;
-    const antes = restantes.length;
-    const nos = estrategia.inicio === 'X' ? colunas1X() : faixas(C, L, { x: true, y: true });
-    if (restantes.length === antes) {
-      const p = restantes.find(disponivel) ?? restantes[0]!;
-      const fixa = restantes.some((r) => r.chapaFixa !== undefined && r.chapaFixa < chapaAtual);
+
+    const perdida = restantes.find((r) => r.chapaFixa !== undefined && r.chapaFixa < chapaAtual);
+    if (perdida) {
       throw new Error(
-        fixa
-          ? `Peça ${p.pecaId} fixada numa chapa onde não coube`
-          : `Peça ${p.pecaId} (${p.c}×${p.l}) não cabe na chapa ${C}×${L}`,
+        `Peça ${perdida.pecaId} fixada na chapa ${perdida.chapaFixa}, mas não coube nela`,
       );
+    }
+
+    const antes = obrigatorias();
+    const nos = estrategia.inicio === 'X' ? colunas1X() : faixas(C, L, { x: true, y: true });
+
+    if (obrigatorias() === antes) {
+      const livres = restantes.filter((r) => !r.opcional && r.chapaFixa === undefined);
+      const futuras = restantes.filter(
+        (r) => r.chapaFixa !== undefined && r.chapaFixa > chapaAtual,
+      );
+      if (livres.length === 0 && futuras.length > 0) {
+        // só sobraram peças fixadas em chapas que não vão existir: trazê-las para a próxima chapa
+        for (const r of futuras) r.chapaFixa = r.chapaFixa! - 1;
+        continue;
+      }
+      const p = restantes.find((r) => !r.opcional && disponivel(r)) ?? restantes[0]!;
+      throw new Error(`Peça ${p.pecaId} (${p.c}×${p.l}) não cabe na chapa ${C}×${L}`);
     }
     chapas.push({
       numero: chapaAtual,

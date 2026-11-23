@@ -3,6 +3,7 @@ import {
   type ChapaPlano,
   type Eixo,
   type Material,
+  type NoCorte,
   type ParametrosCorte,
   type Peca,
 } from '@pro-cutter/core';
@@ -16,14 +17,18 @@ export interface OpcoesOtimizacao {
   tempoMs?: number;
   /** Semente do gerador aleatório: mesma semente = mesmo resultado (padrão 1). */
   semente?: number;
-  /** Peças fixadas pelo usuário numa chapa. */
+  /** Peças fixadas pelo usuário numa chapa (número da chapa dentro deste material, a partir de 1). */
   fixadas?: { pecaId: string; chapa: number }[];
+  /** Peças que só entram em espaço que sobrou, sem abrir chapa nova (ex.: material alternativo). */
+  opcionais?: Peca[];
 }
 
 export interface ResultadoOtimizacao {
   chapas: ChapaPlano[];
   /** Quantas estratégias foram avaliadas. */
   avaliadas: number;
+  /** Quantas unidades de cada peça opcional entraram no plano. */
+  opcionaisColocadas: Record<string, number>;
 }
 
 type Ordenacao = (a: Instancia, b: Instancia) => number;
@@ -40,7 +45,8 @@ const ORDENACOES: Ordenacao[] = [
 
 /**
  * Otimiza o corte de peças de UM material: testa estratégias (ordenações × orientação × início em
- * faixas ou colunas) e fica com o plano de menos chapas; no empate, o de maior sobra útil.
+ * faixas ou colunas) e fica com o plano de menos chapas; no empate, o que coloca mais peças
+ * opcionais e depois o de maior sobra útil.
  */
 export function otimizar(
   pecas: Peca[],
@@ -49,35 +55,44 @@ export function otimizar(
   opcoes: OpcoesOtimizacao = {},
 ): ResultadoOtimizacao {
   const fixadas = new Map((opcoes.fixadas ?? []).map((f) => [f.pecaId, f.chapa]));
-  const base: Omit<Instancia, 'preferirGirada'>[] = pecas.flatMap((p) =>
-    Array.from({ length: p.quantidade }, () => ({
-      pecaId: p.id,
-      c: p.comprimento,
-      l: p.largura,
-      podeGirar: p.podeGirar && !material.temVeio,
-      chapaFixa: fixadas.get(p.id),
-    })),
-  );
-  if (base.length === 0) return { chapas: [], avaliadas: 0 };
+  const instancias = (lista: Peca[], opcional: boolean): Omit<Instancia, 'preferirGirada'>[] =>
+    lista.flatMap((p) =>
+      Array.from({ length: p.quantidade }, () => ({
+        pecaId: p.id,
+        c: p.comprimento,
+        l: p.largura,
+        podeGirar: p.podeGirar && !material.temVeio,
+        chapaFixa: opcional ? undefined : fixadas.get(p.id),
+        opcional,
+      })),
+    );
+  const base = [...instancias(pecas, false), ...instancias(opcoes.opcionais ?? [], true)];
+  const idsOpcionais = new Set((opcoes.opcionais ?? []).map((p) => p.id));
+  if (!base.some((b) => !b.opcional)) return { chapas: [], avaliadas: 0, opcionaisColocadas: {} };
 
   const rnd = criarAleatorio(opcoes.semente ?? 1);
   const limite = Date.now() + (opcoes.tempoMs ?? 5000);
   const iteracoes = opcoes.iteracoes ?? 200;
 
-  let melhor: { chapas: ChapaPlano[]; nota: number[] } | undefined;
+  let melhor: { chapas: ChapaPlano[]; nota: number[]; opc: Record<string, number> } | undefined;
   let avaliadas = 0;
   let ultimoErro: Error | undefined;
 
   const avaliar = (inicio: Eixo, ordem: Instancia[]) => {
-    // peças fixadas primeiro, na ordem da chapa
+    // fixadas primeiro (na ordem da chapa), depois livres, e as opcionais por último
     const fixas = ordem.filter((p) => p.chapaFixa !== undefined);
-    const livres = ordem.filter((p) => p.chapaFixa === undefined);
     fixas.sort((a, b) => a.chapaFixa! - b.chapaFixa!);
+    const livres = ordem.filter((p) => p.chapaFixa === undefined && !p.opcional);
+    const opcionais = ordem.filter((p) => p.opcional);
     try {
-      const chapas = construir(material, params, { inicio, ordem: [...fixas, ...livres] });
+      const chapas = construir(material, params, {
+        inicio,
+        ordem: [...fixas, ...livres, ...opcionais],
+      });
       avaliadas++;
-      const nota = notaDo(chapas, params);
-      if (!melhor || compararNotas(nota, melhor.nota) < 0) melhor = { chapas, nota };
+      const opc = contarPecas(chapas, idsOpcionais);
+      const nota = notaDo(chapas, params, opc);
+      if (!melhor || compararNotas(nota, melhor.nota) < 0) melhor = { chapas, nota, opc };
     } catch (e) {
       ultimoErro = e as Error;
     }
@@ -102,7 +117,19 @@ export function otimizar(
   }
 
   if (!melhor) throw ultimoErro ?? new Error('Não foi possível montar o plano');
-  return { chapas: melhor.chapas, avaliadas };
+  return { chapas: melhor.chapas, avaliadas, opcionaisColocadas: melhor.opc };
+}
+
+function contarPecas(chapas: ChapaPlano[], ids: Set<string>): Record<string, number> {
+  const r: Record<string, number> = {};
+  const visitar = (nos: NoCorte[]) => {
+    for (const n of nos) {
+      if (n.filhos.length) visitar(n.filhos);
+      else if (n.pecaId && ids.has(n.pecaId)) r[n.pecaId] = (r[n.pecaId] ?? 0) + 1;
+    }
+  };
+  for (const ch of chapas) visitar(ch.nos);
+  return r;
 }
 
 /** Troca alguns vizinhos de lugar, mantendo a ordem geral. */
@@ -117,8 +144,14 @@ function perturbar<T>(lista: T[], rnd: () => number): T[] {
   return rnd() < 0.1 ? embaralhar(r, rnd) : r;
 }
 
-/** Menor é melhor: [nº de chapas, −maior sobra útil, −área livre total na última chapa]. */
-function notaDo(chapas: ChapaPlano[], params: ParametrosCorte): number[] {
+/**
+ * Menor é melhor: [nº de chapas, −opcionais colocadas, −maior sobra útil, −área livre na última chapa].
+ */
+function notaDo(
+  chapas: ChapaPlano[],
+  params: ParametrosCorte,
+  opc: Record<string, number>,
+): number[] {
   let maiorSobra = 0;
   let livreUltima = 0;
   chapas.forEach((ch, i) => {
@@ -128,7 +161,8 @@ function notaDo(chapas: ChapaPlano[], params: ParametrosCorte): number[] {
       if (i === chapas.length - 1) livreUltima += s.c * s.l;
     }
   });
-  return [chapas.length, -maiorSobra, -livreUltima];
+  const colocadas = Object.values(opc).reduce((a, b) => a + b, 0);
+  return [chapas.length, -colocadas, -maiorSobra, -livreUltima];
 }
 
 function compararNotas(a: number[], b: number[]): number {

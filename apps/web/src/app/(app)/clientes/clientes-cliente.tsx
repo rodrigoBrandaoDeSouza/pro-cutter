@@ -2,19 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Pencil, Phone, Plus, Search, Trash2 } from 'lucide-react';
+import { Pencil, Phone, Plus, Search } from 'lucide-react';
+import { BotaoExcluir } from '@/components/app/confirmar';
 import { Campo, useAcao } from '@/components/app/form';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -116,7 +106,16 @@ export function ListaClientes({ clientes, busca }: { clientes: ClienteLista[]; b
               <TableCell>
                 <div className="flex justify-end gap-1">
                   <DialogoCliente cliente={c} />
-                  <ExcluirCliente cliente={c} />
+                  <BotaoExcluir
+                    rotulo={`Excluir ${c.nome}`}
+                    titulo={`Excluir ${c.nome}?`}
+                    bloqueio={
+                      c.projetos > 0
+                        ? `Este cliente tem ${c.projetos} projeto(s) e não pode ser excluído.`
+                        : undefined
+                    }
+                    acao={() => excluirCliente(c.id)}
+                  />
                 </div>
               </TableCell>
             </TableRow>
@@ -225,38 +224,5 @@ export function DialogoCliente({
         </form>
       </DialogContent>
     </Dialog>
-  );
-}
-
-function ExcluirCliente({ cliente }: { cliente: ClienteLista }) {
-  const { executar, pendente } = useAcao(excluirCliente);
-  return (
-    <AlertDialog>
-      <AlertDialogTrigger
-        render={<Button variant="ghost" size="icon" aria-label={`Excluir ${cliente.nome}`} />}
-      >
-        <Trash2 />
-      </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Excluir {cliente.nome}?</AlertDialogTitle>
-          <AlertDialogDescription>
-            {cliente.projetos > 0
-              ? `Este cliente tem ${cliente.projetos} projeto(s) e não pode ser excluído.`
-              : 'Esta ação não pode ser desfeita.'}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancelar</AlertDialogCancel>
-          <AlertDialogAction
-            variant="destructive"
-            disabled={pendente || cliente.projetos > 0}
-            onClick={() => executar(cliente.id)}
-          >
-            Excluir
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
   );
 }

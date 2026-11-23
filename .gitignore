@@ -7,3 +7,5 @@ coverage/
 .env.*
 !.env.example
 packages/db/src/generated/
+test-results/
+playwright-report/

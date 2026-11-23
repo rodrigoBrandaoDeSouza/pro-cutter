@@ -7,6 +7,6 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@pro-cutter/core": "*"
+    "@pro-cutter/core": "0.0.0"
   }
 }

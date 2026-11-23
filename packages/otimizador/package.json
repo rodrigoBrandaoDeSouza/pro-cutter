@@ -7,10 +7,10 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@pro-cutter/core": "*"
+    "@pro-cutter/core": "0.0.0"
   },
   "devDependencies": {
-    "@pro-cutter/promob": "*",
-    "@pro-cutter/cvl": "*"
+    "@pro-cutter/promob": "0.0.0",
+    "@pro-cutter/cvl": "0.0.0"
   }
 }

@@ -10,9 +10,9 @@
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
-    "@pro-cutter/core": "*",
-    "@pro-cutter/regras": "*",
-    "@pro-cutter/promob": "*",
+    "@pro-cutter/core": "0.0.0",
+    "@pro-cutter/regras": "0.0.0",
+    "@pro-cutter/promob": "0.0.0",
     "@prisma/client": "7.10.1",
     "@prisma/adapter-pg": "7.10.1",
     "@node-rs/argon2": "^2.2.2",

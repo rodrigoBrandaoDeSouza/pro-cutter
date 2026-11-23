@@ -6,8 +6,8 @@
 
 ## Ambiente
 
-- Node 24, **pnpm** via corepack, Docker (PostgreSQL 16 em `docker-compose.yml`)
-- Monorepo com pnpm workspaces, TypeScript 5 em modo `strict`, **Vitest**, **fast-check** (testes de propriedade), ESLint e Prettier
+- Node 24, **npm workspaces** (o pnpm via corepack exigiria permissão de administrador nesta máquina), Docker (PostgreSQL 16 em `docker-compose.yml`)
+- Monorepo com npm workspaces, TypeScript 5 em modo `strict`, **Vitest**, **fast-check** (testes de propriedade), ESLint e Prettier
 - Os arquivos de `.doc/models/` são **fixtures de teste**, referenciados por caminho (não copiados)
 
 ## Estrutura final
@@ -33,9 +33,9 @@ Dependências entre pacotes (sem ciclos): `core` ← `promob`, `cvl`, `otimizado
 ## Fase 0: Fundação do repositório
 
 ### Tarefa 0.1: Monorepo
-- Criar: `package.json` (raiz, `"private": true`, scripts `test`, `lint`, `typecheck`, `build`), `pnpm-workspace.yaml` (`apps/*`, `packages/*`), `tsconfig.base.json` (strict, `moduleResolution: bundler`, `target: ES2022`), `.gitignore` (node_modules, .next, dist, .env*, coverage), `.editorconfig`, `.prettierrc`, `eslint.config.mjs`, `vitest.workspace.ts`
-- `corepack enable && pnpm install`
-- **Pronto quando:** `pnpm test` roda (0 testes) e `pnpm typecheck` passa
+- Criar: `package.json` (raiz, `"private": true`, scripts `test`, `lint`, `typecheck`, `build`), `workspaces` no package.json (`apps/*`, `packages/*`), `tsconfig.base.json` (strict, `moduleResolution: bundler`, `target: ES2022`), `.gitignore` (node_modules, .next, dist, .env*, coverage), `.editorconfig`, `.prettierrc`, `eslint.config.mjs`, `vitest.workspace.ts`
+- `npm install`
+- **Pronto quando:** `npm test` roda e `npm run typecheck` passa
 - Commit: `chore: monorepo base (pnpm, ts, vitest, eslint)`
 
 ### Tarefa 0.2: Pacote `core` com tipos de domínio
@@ -238,7 +238,7 @@ Um commit por tarefa.
 ## Fase 10: Fechamento da v1
 
 - **10.1** Teste ponta a ponta (Playwright): login, cliente, projeto, importar a cozinha, otimizar, ver o plano, baixar o ZIP. O ZIP precisa conter 5 `.prog` válidos.
-- **10.2** README com como rodar (`docker compose up`, `pnpm dev`) e como instalar na marcenaria
+- **10.2** README com como rodar (`docker compose up`, `npm run dev`) e como instalar na marcenaria
 - **10.3** Validação na máquina real: importar um ZIP gerado no supervisório da CVL e cortar uma chapa de teste
 
 ---

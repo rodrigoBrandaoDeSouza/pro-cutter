@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
 import type { ParametroRegra, TipoModulo } from '@pro-cutter/regras';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AbaFormulas } from './aba-formulas';
@@ -27,14 +27,17 @@ export function AbasConfiguracao(props: {
   importacao: ImportacaoForm;
   etiqueta: { largura: number; altura: number };
 }) {
-  const router = useRouter();
-  const pathname = usePathname();
   const inicial = ABAS.some(([v]) => v === props.abaInicial) ? props.abaInicial : 'materiais';
+  const [aba, setAba] = useState<string>(inicial);
 
   return (
     <Tabs
-      defaultValue={inicial}
-      onValueChange={(v) => router.replace(`${pathname}?aba=${String(v)}`, { scroll: false })}
+      value={aba}
+      onValueChange={(v) => {
+        // Só atualiza a URL (para recarregar na mesma aba), sem ida ao servidor
+        setAba(String(v));
+        window.history.replaceState(null, '', `?aba=${String(v)}`);
+      }}
     >
       <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
         <TabsList>

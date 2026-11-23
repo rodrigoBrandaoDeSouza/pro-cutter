@@ -49,6 +49,12 @@ test('regras: muda valor; não deixa remover parâmetro usado em fórmula', asyn
   await page.getByRole('button', { name: 'Remover Folga entre portas' }).click();
   await page.getByRole('button', { name: 'Salvar regras' }).click();
   await expect(page.getByText(/quebra fórmulas/)).toBeVisible();
+
+  // devolve o valor original para não afetar os outros testes
+  await page.reload();
+  await page.getByLabel('Valor de Folga entre portas').fill('3');
+  await page.getByRole('button', { name: 'Salvar regras' }).click();
+  await expect(page.getByText('Regras salvas')).toBeVisible();
 });
 
 test('fórmulas: valida enquanto digita, mostra prévia e salva', async ({ page }, info) => {

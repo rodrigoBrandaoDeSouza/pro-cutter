@@ -1,20 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  Boxes,
-  ChevronDown,
-  FileUp,
-  LayoutGrid,
-  MoreHorizontal,
-  Pencil,
-  Scissors,
-  SlidersHorizontal,
-  Trash2,
-} from 'lucide-react';
-import { EstadoVazio } from '@/components/app/cabecalho';
+import { ChevronDown, MoreHorizontal, Pencil, Trash2 } from 'lucide-react';
 import { Campo, SelectNativo, useAcao } from '@/components/app/form';
-import { quando, SeloStatus } from '@/components/app/status';
+import { SeloStatus } from '@/components/app/status';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -43,7 +32,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ROTULO_STATUS, STATUS, type Status } from '@/lib/status';
 import { editarProjeto, excluirProjeto, mudarStatus } from '../actions';
 
@@ -213,84 +201,4 @@ export function AcoesProjeto({
   );
 }
 
-export interface ItemHistorico {
-  id: string;
-  de: Status | null;
-  para: Status;
-  em: string;
-  usuario: string;
-}
-
-export function AbasProjeto({ historico }: { historico: ItemHistorico[] }) {
-  return (
-    <Tabs defaultValue="ambientes">
-      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        <TabsList>
-          <TabsTrigger value="ambientes">
-            <LayoutGrid /> Ambientes
-          </TabsTrigger>
-          <TabsTrigger value="pecas">
-            <Boxes /> Peças
-          </TabsTrigger>
-          <TabsTrigger value="plano">
-            <Scissors /> Plano de corte
-          </TabsTrigger>
-          <TabsTrigger value="regras">
-            <SlidersHorizontal /> Regras
-          </TabsTrigger>
-          <TabsTrigger value="historico">Histórico</TabsTrigger>
-        </TabsList>
-      </div>
-      <TabsContent value="ambientes">
-        <EstadoVazio
-          icone={<FileUp />}
-          titulo="Nenhum ambiente ainda"
-          descricao="Importe o XML do Promob de cada ambiente (cozinha, dormitório…). A importação chega na próxima etapa."
-        />
-      </TabsContent>
-      <TabsContent value="pecas">
-        <EstadoVazio
-          icone={<Boxes />}
-          titulo="Sem peças"
-          descricao="As peças aparecem aqui depois da importação."
-        />
-      </TabsContent>
-      <TabsContent value="plano">
-        <EstadoVazio
-          icone={<Scissors />}
-          titulo="Sem plano de corte"
-          descricao="Otimize depois de ter as peças."
-        />
-      </TabsContent>
-      <TabsContent value="regras">
-        <EstadoVazio
-          icone={<SlidersHorizontal />}
-          titulo="Regras do projeto"
-          descricao="Ajuste de folgas e fórmulas só deste projeto: chega junto com os módulos."
-        />
-      </TabsContent>
-      <TabsContent value="historico" className="mt-6">
-        <ol className="relative max-w-xl space-y-5 border-l pl-6" aria-label="Histórico de status">
-          {historico.map((h) => (
-            <li key={h.id} className="relative">
-              <span className="absolute top-1.5 -left-[1.95rem] size-2.5 rounded-full border-2 border-background bg-primary" />
-              <div className="flex flex-wrap items-center gap-2 text-sm">
-                {h.de ? (
-                  <>
-                    <SeloStatus status={h.de} /> <span className="text-muted-foreground">→</span>
-                  </>
-                ) : (
-                  <span className="text-muted-foreground">Criado como</span>
-                )}
-                <SeloStatus status={h.para} />
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {h.usuario} · {quando(h.em)}
-              </p>
-            </li>
-          ))}
-        </ol>
-      </TabsContent>
-    </Tabs>
-  );
-}
+export { AbasProjeto } from './abas-projeto';

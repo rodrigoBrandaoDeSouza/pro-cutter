@@ -17,6 +17,8 @@ export type Fitas = [number, number, number, number];
 export interface Peca {
   id: string;
   nome: string;
+  /** Tipo de peça da marcenaria (base, lateral, sarrafo, porta, fundo, outro…). */
+  tipo?: string;
   /** Medida no eixo X quando não girada. */
   comprimento: number;
   /** Medida no eixo Y quando não girada. */

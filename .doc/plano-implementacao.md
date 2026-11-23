@@ -141,7 +141,7 @@ Dependências entre pacotes (sem ciclos): `core` ← `promob`, `cvl`, `otimizado
 - Commit: `feat(otimizador): fixar peça em chapa e material alternativo`
 
 ### Tarefa 3.5: Métricas
-- `metricas(plano)`: por chapa (área de peças, área da chapa, %, sobra útil, perda), por material e total do projeto, como em §8.1 do design
+- `metricas(plano)`: por chapa (área de peças, área da chapa, %, sobra útil, perda), por material e total do projeto, como em §8.1 do design. **Feito no `core`**, porque o visualizador e o relatório usam as métricas sem depender do otimizador
 - Commit: `feat(otimizador): métricas de aproveitamento`
 
 ---

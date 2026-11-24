@@ -4,6 +4,29 @@
 > **Método:** TDD. Primeiro o teste falhando, depois a implementação mínima, depois refatorar, depois commit.
 > **Ordem:** núcleo puro primeiro (sem web nem banco, validado com os arquivos reais de `.doc/models/`), depois banco, telas e saídas.
 
+## Situação em 24/11/2026
+
+**v1 implementada** no branch `feat/v1` (não enviado ao GitHub; ver Pendências).
+
+| Fase | Situação |
+|---|---|
+| 0–4: núcleo (core, Promob, CVL, otimizador, regras) | Feita. Ida e volta byte a byte com os 5 .prog reais; cozinha em 3+2 chapas (78,4%) |
+| 5: banco e login | Feita. Autenticação própria (argon2id), isolamento por empresa testado |
+| 6: cadastros | Feita. Usuários, clientes, configurações, fórmulas com prévia, projetos com status |
+| 7: projeto por dentro | Feita. Importação com resolução de materiais, módulos, peças, regras do projeto |
+| 8: plano de corte | Feita. Sem fila (decisão 8.1); visualizador com sequência de cortes e fixação de peças |
+| 9: saídas | Feita. ZIP verificado, PDFs de desenho, etiquetas (QR) e relatório |
+| 10: fechamento | Feita, exceto 10.3 (validação na máquina real) |
+
+Testes: 136 de unidade/integração; 40 cenários no navegador (desktop e tablet), também contra a build de produção e pelo IP da rede. Stack Docker testada de ponta a ponta.
+
+### Pendências
+
+1. **Validar na CVL** (10.3): importar o ZIP no supervisório e cortar uma chapa de teste; anotar a espessura real da serra.
+2. **Publicação:** o repositório no GitHub é **público** e o histórico tem dados reais em `.doc/models` (nome de cliente, número de série/código da licença do Promob, projeto `angela.*`). Antes de enviar: tornar o repositório privado ou anonimizar o histórico.
+3. Mais amostras de XML/.prog: confirmar a convenção dos lados da fita, se portas e fundos vêm em alguma listagem do Promob e o sarrafo cortado em outra cor.
+4. Imagem Docker de 1,8 GB: dá para enxugar (saída standalone do Next) numa próxima versão.
+
 ## Ambiente
 
 - Node 24, **npm workspaces** (o pnpm via corepack exigiria permissão de administrador nesta máquina), Docker (PostgreSQL 16 em `docker-compose.yml`)

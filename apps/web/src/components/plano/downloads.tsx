@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, Download, FileText, Loader2, Tags, Table2 } from 'lucide-react';
+import { ChevronDown, Download, FileText, Loader2, Printer, Tags, Table2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import {
@@ -18,6 +18,71 @@ function nomeDoCabecalho(cd: string | null, padrao: string): string {
   const utf8 = cd?.match(/filename\*=UTF-8''([^;]+)/)?.[1];
   if (utf8) return decodeURIComponent(utf8);
   return cd?.match(/filename="([^"]+)"/)?.[1] ?? padrao;
+}
+
+const IMPRESSOS = [
+  { arquivo: 'desenho.pdf', rotulo: 'Desenho das chapas', icone: FileText },
+  { arquivo: 'etiquetas.pdf', rotulo: 'Etiquetas', icone: Tags },
+  { arquivo: 'relatorio.pdf', rotulo: 'Relatório de material', icone: Table2 },
+] as const;
+
+/** Tablet e celular não imprimem PDF de dentro de um iframe: lá o PDF abre numa aba nova. */
+function ehMovel() {
+  const ua = navigator.userAgent;
+  return (
+    /iPad|iPhone|Android|Mobile/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
+  );
+}
+
+/**
+ * Imprime o PDF sem baixar: no computador carrega num iframe invisível e abre a janela de
+ * impressão; no tablet abre o PDF numa aba nova, onde fica o botão de imprimir do navegador.
+ */
+export function Imprimir({ projetoId, versao }: { projetoId: string; versao: number }) {
+  const [preparando, setPreparando] = useState(false);
+
+  const imprimir = (arquivo: (typeof IMPRESSOS)[number]['arquivo']) => {
+    const url = `/projetos/${projetoId}/plano/${versao}/${arquivo}?inline=1`;
+    if (ehMovel()) {
+      // precisa ser síncrono no clique, senão o bloqueador de pop-up impede
+      if (!window.open(url, '_blank'))
+        toast.error('Libere pop-ups para este site e tente de novo.');
+      return;
+    }
+    setPreparando(true);
+    document.getElementById('pc-impressao')?.remove();
+    const quadro = document.createElement('iframe');
+    quadro.id = 'pc-impressao';
+    quadro.title = 'Impressão';
+    quadro.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';
+    quadro.src = url;
+    quadro.onload = () => {
+      setPreparando(false);
+      try {
+        quadro.contentWindow?.focus();
+        quadro.contentWindow?.print();
+      } catch {
+        window.open(url, '_blank');
+      }
+    };
+    document.body.append(quadro);
+  };
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger render={<Button variant="outline" disabled={preparando} />}>
+        {preparando ? <Loader2 className="animate-spin" /> : <Printer />} Imprimir
+        <ChevronDown className="opacity-60" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-56">
+        {IMPRESSOS.map(({ arquivo, rotulo, icone: Icone }) => (
+          <DropdownMenuItem key={arquivo} onClick={() => imprimir(arquivo)}>
+            <Icone /> {rotulo}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 }
 
 /**

@@ -48,9 +48,9 @@ test('projeto em corte aparece no painel; admin ajusta a referência', async ({ 
   await expect(page.getByText('referência 70%').first()).toBeVisible();
 });
 
-test('usuário comum vê o painel, mas não muda a referência', async ({ page }) => {
+test('usuário comum não acessa o painel', async ({ page }) => {
   await entrar(page, COMUM);
+  await expect(page.getByRole('link', { name: 'Painel', exact: true })).toHaveCount(0);
   await page.goto('/painel');
-  await expect(page.getByRole('heading', { name: 'Painel', exact: true })).toBeVisible();
-  await expect(page.getByLabel('Aproveitamento de referência (%)')).toHaveCount(0);
+  await expect(page).toHaveURL(/sem-permissao/);
 });

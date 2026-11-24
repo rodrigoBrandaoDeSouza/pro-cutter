@@ -14,7 +14,9 @@ import { BarrasMensais } from '@/components/painel/barras-mensais';
 import { buttonVariants } from '@/components/ui/button';
 import { formatar } from '@/lib/formatos';
 import { montarPainel, type LinhaProjeto } from '@/lib/server/painel';
-import { dbDoUsuario } from '@/lib/server/sessao';
+import { daEmpresa } from '@pro-cutter/db';
+import { prisma } from '@/lib/server/db';
+import { exigirAdmin } from '@/lib/server/sessao';
 import { Referencia } from './referencia';
 
 export const metadata: Metadata = { title: 'Painel' };
@@ -22,12 +24,13 @@ export const metadata: Metadata = { title: 'Painel' };
 const PERIODOS = [3, 6, 12] as const;
 
 export default async function PaginaPainel({ searchParams }: PageProps<'/painel'>) {
-  const { usuario, db } = await dbDoUsuario();
+  // Custos e economia são informação de gestão: só administrador
+  const admin = await exigirAdmin();
+  const db = daEmpresa(prisma, admin.empresaId);
   const sp = await searchParams;
   const meses = PERIODOS.find((p) => String(p) === sp.meses) ?? 12;
   const d = await montarPainel(db, meses);
   const p = d.periodo;
-  const ehAdmin = usuario.papel === 'ADMIN';
   const comPreco = p.custo > 0;
 
   const filtro = (
@@ -79,7 +82,7 @@ export default async function PaginaPainel({ searchParams }: PageProps<'/painel'
         acao={filtro}
       />
       <div className="space-y-6 px-4 py-6 sm:px-8">
-        {d.materiaisSemPreco > 0 && ehAdmin && (
+        {d.materiaisSemPreco > 0 && (
           <div className="flex flex-wrap items-center gap-3 rounded-xl border border-warning/40 bg-warning/10 px-4 py-3 text-sm">
             <CircleAlert className="size-4 shrink-0 text-warning" />
             <span className="flex-1">
@@ -316,13 +319,7 @@ export default async function PaginaPainel({ searchParams }: PageProps<'/painel'
                 nem sobra útil: serra, refilos e retalhos pequenos.
               </p>
             </div>
-            {ehAdmin ? (
-              <Referencia valor={d.referencia} />
-            ) : (
-              <p>
-                Referência atual: <strong>{formatar(d.referencia, 'pct')}</strong>
-              </p>
-            )}
+            <Referencia valor={d.referencia} />
           </div>
         </Cartao>
       </div>

@@ -52,7 +52,7 @@ interface ItemNav {
 }
 
 const NAV: ItemNav[] = [
-  { href: '/painel', rotulo: 'Painel', icone: LayoutDashboard },
+  { href: '/painel', rotulo: 'Painel', icone: LayoutDashboard, admin: true },
   { href: '/projetos', rotulo: 'Projetos', icone: FolderKanban },
   { href: '/clientes', rotulo: 'Clientes', icone: Users },
   { href: '/configuracoes', rotulo: 'Configurações', icone: Settings, admin: true },

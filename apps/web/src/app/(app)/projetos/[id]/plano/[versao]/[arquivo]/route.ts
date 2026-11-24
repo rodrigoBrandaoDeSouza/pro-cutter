@@ -17,17 +17,17 @@ const ARQUIVOS = {
 type Arquivo = keyof typeof ARQUIVOS;
 
 /** Content-Disposition com nome ASCII (navegadores antigos) e UTF-8 (acentos). */
-function anexo(nome: string): string {
+function anexo(nome: string, inline = false): string {
   const ascii = nome
     .normalize('NFD')
     .replace(/\p{Diacritic}/gu, '')
     .replace(/[^\x20-\x7e]/g, '_')
     .replace(/["\\]/g, '_');
-  return `attachment; filename="${ascii}"; filename*=UTF-8''${encodeURIComponent(nome)}`;
+  return `${inline ? 'inline' : 'attachment'}; filename="${ascii}"; filename*=UTF-8''${encodeURIComponent(nome)}`;
 }
 
 export async function GET(
-  _: Request,
+  req: Request,
   ctx: RouteContext<'/projetos/[id]/plano/[versao]/[arquivo]'>,
 ) {
   const { db } = await dbDoUsuario();
@@ -68,7 +68,11 @@ export async function GET(
   return new Response(Buffer.from(bytes), {
     headers: {
       'Content-Type': tipo,
-      'Content-Disposition': anexo(`${d.projeto.nome} - plano v${d.plano.versao} - ${sufixo}`),
+      // ?inline=1 abre no navegador (para imprimir) em vez de baixar
+      'Content-Disposition': anexo(
+        `${d.projeto.nome} - plano v${d.plano.versao} - ${sufixo}`,
+        tipo === 'application/pdf' && new URL(req.url).searchParams.get('inline') === '1',
+      ),
       'Cache-Control': 'private, no-store',
       'X-Plano-Atual': d.atual ? '1' : '0',
     },

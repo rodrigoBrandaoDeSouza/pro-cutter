@@ -28,7 +28,7 @@ import {
   type Peca,
 } from '@pro-cutter/core';
 import { EstadoVazio } from '@/components/app/cabecalho';
-import { Downloads } from '@/components/plano/downloads';
+import { Downloads, Imprimir } from '@/components/plano/downloads';
 import { MiniFita } from '@/components/app/mini-fita';
 import { quando } from '@/components/app/status';
 import { ChapaSvg, COR_NIVEL, fmt } from '@/components/plano/chapa-svg';
@@ -134,6 +134,9 @@ function VisualizadorPlano({
     [plano.materiais],
   );
   const met = useMemo(() => metricas({ chapas: plano.chapas }, op), [plano.chapas, op]);
+  // Mesmo critério do Painel: as sobras úteis não contam como chapa consumida
+  const consumida = met.total.areaChapa - met.total.sobraUtil;
+  const liquido = consumida > 0 ? met.total.areaPecas / consumida : 0;
   const fita = useMemo(() => consumoDeFita(plano.pecas), [plano.pecas]);
 
   // Numeração oficial (a mesma do PDF e das etiquetas): chapa a chapa, na ordem do desenho
@@ -188,6 +191,7 @@ function VisualizadorPlano({
           >
             {otimizando ? <Loader2 className="animate-spin" /> : <Wand2 />} Otimizar de novo
           </Button>
+          <Imprimir projetoId={projetoId} versao={plano.versao} />
           <Downloads
             projetoId={projetoId}
             versao={plano.versao}
@@ -213,9 +217,9 @@ function VisualizadorPlano({
       <section aria-label="Resumo do plano" className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <Kpi
           rotulo="Aproveitamento do projeto"
-          valor={pct(met.total.aproveitamento)}
-          destaque={corAproveitamento(met.total.aproveitamento)}
-          detalhe={`${m2(met.total.areaPecas)} de peças em ${m2(met.total.areaChapa)} de chapa`}
+          valor={pct(liquido)}
+          destaque={corAproveitamento(liquido)}
+          detalhe={`Sem as sobras úteis, que voltam ao estoque · chapa inteira: ${pct(met.total.aproveitamento)}`}
         />
         <Kpi
           rotulo="Chapas"

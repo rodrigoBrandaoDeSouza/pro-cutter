@@ -51,6 +51,33 @@ test('baixa o ZIP da CVL e os PDFs do plano', async ({ page }, info) => {
     expect((await PDFDocument.load(pdf.bytes)).getPageCount()).toBeGreaterThanOrEqual(1);
   }
 
+  // Imprimir: abre o PDF no navegador (inline) em vez de baixar
+  const escolher = async () => {
+    await page.getByRole('button', { name: 'Imprimir' }).click();
+    await page.getByRole('menuitem', { name: 'Desenho das chapas' }).click();
+  };
+  if (info.project.name === 'tablet') {
+    // no tablet o PDF abre numa aba nova, onde fica o botão de imprimir
+    // (o Chromium de teste não tem visualizador de PDF; basta ver o pedido da aba nova)
+    const [aba, pedido] = await Promise.all([
+      page.waitForEvent('popup'),
+      page.context().waitForEvent('request', (r) => r.url().includes('desenho.pdf?inline=1')),
+      escolher(),
+    ]);
+    expect(pedido.frame().page()).toBe(aba);
+    await aba.close();
+  } else {
+    await escolher();
+    await expect(page.locator('iframe#pc-impressao')).toHaveAttribute(
+      'src',
+      /desenho\.pdf\?inline=1/,
+    );
+  }
+  const inline = await page.request.get(
+    new URL(page.url()).pathname.replace(/\/?$/, '') + '/plano/1/desenho.pdf?inline=1',
+  );
+  expect(inline.headers()['content-disposition']).toMatch(/^inline;/);
+
   // sem login, a rota não entrega o arquivo
   const url = new URL(page.url());
   const projetoId = url.pathname.split('/')[2];

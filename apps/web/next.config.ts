@@ -1,3 +1,4 @@
+import path from 'node:path';
 import { config } from 'dotenv';
 import type { NextConfig } from 'next';
 
@@ -7,6 +8,10 @@ config({ path: '../../.env', quiet: true });
 const nextConfig: NextConfig = {
   // Permite um segundo servidor (testes ponta a ponta) sem disputar a pasta .next
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
+  // Imagem Docker: só os arquivos que o servidor usa (o build roda em apps/web)
+  ...(process.env.NEXT_STANDALONE
+    ? { output: 'standalone' as const, outputFileTracingRoot: path.resolve(process.cwd(), '../..') }
+    : {}),
   // Pacotes do monorepo são publicados como TypeScript (src/*.ts)
   transpilePackages: [
     '@pro-cutter/core',

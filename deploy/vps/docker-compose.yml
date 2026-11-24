@@ -1,0 +1,50 @@
+# pro-cutter numa VPS com nginx na frente (HTTPS pelo certbot). Fica em /opt/pro-cutter com o .env.
+# A imagem chega pronta pelo deploy/vps/publicar.sh (não compila na VPS).
+name: pro-cutter
+
+services:
+  banco:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: procutter
+      POSTGRES_PASSWORD: ${POSTGRES_SENHA:?defina POSTGRES_SENHA no .env}
+      POSTGRES_DB: procutter
+    volumes:
+      - dados:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U procutter']
+      interval: 5s
+      retries: 20
+    mem_limit: 384m
+
+  app:
+    image: pro-cutter:${VERSAO:?defina VERSAO no .env}
+    restart: unless-stopped
+    depends_on:
+      banco:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://procutter:${POSTGRES_SENHA}@banco:5432/procutter
+      SEED_EMPRESA: ${SEED_EMPRESA:-Minha Marcenaria}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:?defina SEED_ADMIN_EMAIL no .env}
+      SEED_ADMIN_SENHA: ${SEED_ADMIN_SENHA:?defina SEED_ADMIN_SENHA no .env}
+    # Só a própria VPS acessa; o nginx publica com HTTPS
+    ports:
+      - '127.0.0.1:${PORTA:-3020}:3000'
+    mem_limit: 768m
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:3000/entrar').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+
+volumes:
+  dados:

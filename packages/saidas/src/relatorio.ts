@@ -1,7 +1,6 @@
 import { PDFDocument, PageSizes, type PDFPage } from 'pdf-lib';
-import { metricas, type Resumo } from '@pro-cutter/core';
+import { consumoDeFita, metricas, type Resumo } from '@pro-cutter/core';
 import type { DadosSaida } from './dados.ts';
-import { consumoDeFita } from './fita.ts';
 import {
   caber,
   carregarFontes,

@@ -18,7 +18,9 @@ import {
 import { toast } from 'sonner';
 import { cn } from 'cn';
 import {
+  consumoDeFita,
   metricas,
+  numerarPecas,
   posicionar,
   type ChapaPlano,
   type Material,
@@ -26,6 +28,7 @@ import {
   type Peca,
 } from '@pro-cutter/core';
 import { EstadoVazio } from '@/components/app/cabecalho';
+import { Downloads } from '@/components/plano/downloads';
 import { MiniFita } from '@/components/app/mini-fita';
 import { quando } from '@/components/app/status';
 import { ChapaSvg, COR_NIVEL, fmt } from '@/components/plano/chapa-svg';
@@ -93,6 +96,7 @@ export function AbaPlano({
 
   return (
     <VisualizadorPlano
+      projetoId={projetoId}
       plano={plano}
       nomes={nomes}
       otimizando={otimizando}
@@ -104,6 +108,7 @@ export function AbaPlano({
 }
 
 function VisualizadorPlano({
+  projetoId,
   plano,
   nomes,
   otimizando,
@@ -111,6 +116,7 @@ function VisualizadorPlano({
   setFixadas,
   aoOtimizar,
 }: {
+  projetoId: string;
   plano: PlanoVM;
   nomes: { ambientes: Record<string, string>; modulos: Record<string, string> };
   otimizando: boolean;
@@ -127,14 +133,19 @@ function VisualizadorPlano({
     () => new Map(plano.materiais.map((m) => [m.id, m])),
     [plano.materiais],
   );
-  const geometrias = useMemo(() => plano.chapas.map((c) => posicionar(c, op)), [plano.chapas, op]);
   const met = useMemo(() => metricas({ chapas: plano.chapas }, op), [plano.chapas, op]);
+  const fita = useMemo(() => consumoDeFita(plano.pecas), [plano.pecas]);
 
-  // Numeração global das peças (a mesma das etiquetas): chapa a chapa, na ordem do desenho
-  const numeros = useMemo(() => {
-    let n = 0;
-    return geometrias.map((g) => g.pecas.map(() => ++n));
-  }, [geometrias]);
+  // Numeração oficial (a mesma do PDF e das etiquetas): chapa a chapa, na ordem do desenho
+  const { geometrias, numeros } = useMemo(() => {
+    const r = numerarPecas({ chapas: plano.chapas }, op);
+    return {
+      geometrias: r.geometrias,
+      numeros: plano.chapas.map((c) =>
+        r.pecas.filter((p) => p.chapa === c.numero).map((p) => p.numero),
+      ),
+    };
+  }, [plano.chapas, op]);
 
   const [sel, setSel] = useState(0);
   const [pecaSel, setPecaSel] = useState<number | undefined>();
@@ -177,6 +188,11 @@ function VisualizadorPlano({
           >
             {otimizando ? <Loader2 className="animate-spin" /> : <Wand2 />} Otimizar de novo
           </Button>
+          <Downloads
+            projetoId={projetoId}
+            versao={plano.versao}
+            desatualizado={plano.status === 'DESATUALIZADO'}
+          />
         </div>
       </div>
 
@@ -239,6 +255,27 @@ function VisualizadorPlano({
           </div>
         ))}
       </section>
+      {fita.length > 0 && (
+        <section aria-label="Fita de borda" className="rounded-xl border bg-card px-4 py-3">
+          <h3 className="mb-2 text-sm font-semibold">Fita de borda</h3>
+          <ul className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+            {fita.map((c) => (
+              <li key={`${c.materialId}-${c.espessura}`} className="flex justify-between gap-3">
+                <span className="truncate">
+                  {materiais.get(c.materialId)?.descricao}{' '}
+                  <span className="text-muted-foreground">· {fmt(c.espessura)} mm</span>
+                </span>
+                <span className="tabular-nums whitespace-nowrap">
+                  {fmt(c.metros)} m{' '}
+                  <span className="text-muted-foreground">
+                    (comprar {Math.ceil(c.metros * 1.1)} m)
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* Miniaturas */}
       <section aria-label="Chapas">

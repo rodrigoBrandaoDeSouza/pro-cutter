@@ -15,11 +15,12 @@ const nextConfig: NextConfig = {
     '@pro-cutter/regras',
     '@pro-cutter/otimizador',
     '@pro-cutter/cvl',
+    '@pro-cutter/saidas',
   ],
   // Módulos nativos / com binários ficam fora do bundle
   // XML do Promob vai pela ação do servidor (o padrão é 1 MB)
   experimental: { serverActions: { bodySizeLimit: '10mb' } },
-  serverExternalPackages: ['@node-rs/argon2', 'pg', '@prisma/adapter-pg'],
+  serverExternalPackages: ['@node-rs/argon2', 'pg', '@prisma/adapter-pg', 'qrcode', 'pdf-lib'],
   turbopack: {
     rules: {
       '*.css': {

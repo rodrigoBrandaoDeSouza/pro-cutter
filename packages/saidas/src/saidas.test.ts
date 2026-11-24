@@ -7,7 +7,7 @@ import { exportarPlano } from '@pro-cutter/cvl';
 import { otimizarProjeto } from '@pro-cutter/otimizador';
 import { converter, CONFIG_PADRAO, lerListagem } from '@pro-cutter/promob';
 import type { DadosSaida } from './dados.ts';
-import { consumoDeFita } from './fita.ts';
+import { consumoDeFita } from '@pro-cutter/core';
 import { pdfDesenho } from './pdf-desenho.ts';
 import { conteudoQr, pdfEtiquetas } from './pdf-etiquetas.ts';
 import { MM, textoSeguro } from './pdf-util.ts';

@@ -1,4 +1,4 @@
-import type { Peca } from '@pro-cutter/core';
+import type { Peca } from './tipos.ts';
 
 export interface ConsumoFita {
   materialId: string;

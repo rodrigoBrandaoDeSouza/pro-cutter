@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
@@ -19,5 +21,8 @@
     "dotenv": "^18.0.10",
     "pg": "^8.23.1"
   },
-  "devDependencies": { "prisma": "7.10.1", "tsx": "^4.20.0" }
+  "devDependencies": {
+    "prisma": "7.10.1",
+    "tsx": "^4.20.0"
+  }
 }

@@ -32,11 +32,11 @@ export interface ErroExportacao {
  * e com caracteres inválidos para nome de arquivo trocados por "_".
  */
 export function nomeArquivo(projeto: string, material: string, seq: number): string {
-  // eslint-disable-next-line no-control-regex
   const limpar = (s: string) =>
     s
       .normalize('NFD')
       .replace(/\p{Diacritic}/gu, '')
+      // eslint-disable-next-line no-control-regex -- caracteres de controle são inválidos em nome de arquivo
       .replace(/[<>:"/\\|?*\u0000-\u001f]/g, '_')
       .trim();
   return `${limpar(projeto)}-${limpar(material)}.${String(seq).padStart(3, '0')}.prog`;

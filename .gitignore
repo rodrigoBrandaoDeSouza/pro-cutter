@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.next/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+!.env.producao.example
+packages/db/src/generated/
+test-results/
+playwright-report/
+
+# Configuração local do Claude Code (caminhos desta máquina)
+.claude/settings.local.json

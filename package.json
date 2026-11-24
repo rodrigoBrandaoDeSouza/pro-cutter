@@ -1,0 +1,41 @@
+{
+  "name": "pro-cutter",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @pro-cutter/web",
+    "build": "npm run build -w @pro-cutter/web",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "npm run e2e -w @pro-cutter/web",
+    "typecheck": "tsc -b && tsc -p apps/web --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "db:up": "docker compose up -d",
+    "db:migrate": "npm run migrate -w @pro-cutter/db",
+    "db:seed": "npm run seed -w @pro-cutter/db",
+    "db:seed-demo": "npm run seed-demo -w @pro-cutter/web --"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "fast-check": "^4.11.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^5.1.1"
+  },
+  "allowScripts": {
+    "prisma@7.10.1": true,
+    "@prisma/engines@7.10.1": true,
+    "esbuild": false
+  }
+}

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# fixtures reais: preservar byte a byte (testes de ida e volta)
+.doc/models/** -text
+*.promob binary
+*.bak binary

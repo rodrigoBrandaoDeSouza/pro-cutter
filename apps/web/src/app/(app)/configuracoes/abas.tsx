@@ -1,0 +1,76 @@
+'use client';
+
+import { useState } from 'react';
+import type { ParametroRegra, TipoModulo } from '@pro-cutter/regras';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AbaFormulas } from './aba-formulas';
+import { AbaImportacao, type ImportacaoForm } from './aba-importacao';
+import { AbaMaquina, type MaquinaForm } from './aba-maquina';
+import { AbaMateriais, type FitaLista, type MaterialLista } from './aba-materiais';
+import { AbaRegras } from './aba-regras';
+
+const ABAS = [
+  ['materiais', 'Materiais'],
+  ['maquina', 'Máquina'],
+  ['regras', 'Folgas e regras'],
+  ['formulas', 'Fórmulas'],
+  ['importacao', 'Importação e etiqueta'],
+] as const;
+
+export function AbasConfiguracao(props: {
+  abaInicial: string;
+  materiais: MaterialLista[];
+  fitas: FitaLista[];
+  maquina: MaquinaForm;
+  regras: ParametroRegra[];
+  tiposModulo: TipoModulo[];
+  importacao: ImportacaoForm;
+  etiqueta: { largura: number; altura: number };
+}) {
+  const inicial = ABAS.some(([v]) => v === props.abaInicial) ? props.abaInicial : 'materiais';
+  const [aba, setAba] = useState<string>(inicial);
+
+  return (
+    <Tabs
+      value={aba}
+      onValueChange={(v) => {
+        // Só atualiza a URL (para recarregar na mesma aba), sem ida ao servidor
+        setAba(String(v));
+        window.history.replaceState(null, '', `?aba=${String(v)}`);
+      }}
+    >
+      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <TabsList>
+          {ABAS.map(([valor, rotulo]) => (
+            <TabsTrigger key={valor} value={valor}>
+              {rotulo}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
+      <TabsContent value="materiais" className="mt-6" keepMounted>
+        <AbaMateriais materiais={props.materiais} fitas={props.fitas} />
+      </TabsContent>
+      <TabsContent value="maquina" className="mt-6" keepMounted>
+        <AbaMaquina maquina={props.maquina} />
+      </TabsContent>
+      <TabsContent value="regras" className="mt-6" keepMounted>
+        <AbaRegras regras={props.regras} />
+      </TabsContent>
+      <TabsContent value="formulas" className="mt-6" keepMounted>
+        <AbaFormulas
+          tipos={props.tiposModulo}
+          regras={props.regras}
+          aoIrParaRegras={() => {
+            setAba('regras');
+            window.history.replaceState(null, '', '?aba=regras');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        />
+      </TabsContent>
+      <TabsContent value="importacao" className="mt-6" keepMounted>
+        <AbaImportacao importacao={props.importacao} etiqueta={props.etiqueta} />
+      </TabsContent>
+    </Tabs>
+  );
+}

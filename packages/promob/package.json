@@ -1,0 +1,13 @@
+{
+  "name": "@pro-cutter/promob",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@pro-cutter/core": "0.0.0",
+    "fast-xml-parser": "^5.12.1"
+  }
+}

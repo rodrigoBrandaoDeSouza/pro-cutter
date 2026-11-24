@@ -4,10 +4,33 @@
 > **Método:** TDD. Primeiro o teste falhando, depois a implementação mínima, depois refatorar, depois commit.
 > **Ordem:** núcleo puro primeiro (sem web nem banco, validado com os arquivos reais de `.doc/models/`), depois banco, telas e saídas.
 
+## Situação em 24/11/2026
+
+**v1 implementada** no branch `feat/v1` (não enviado ao GitHub; ver Pendências).
+
+| Fase | Situação |
+|---|---|
+| 0–4: núcleo (core, Promob, CVL, otimizador, regras) | Feita. Ida e volta byte a byte com os 5 .prog reais; cozinha em 3+2 chapas (78,4%) |
+| 5: banco e login | Feita. Autenticação própria (argon2id), isolamento por empresa testado |
+| 6: cadastros | Feita. Usuários, clientes, configurações, fórmulas com prévia, projetos com status |
+| 7: projeto por dentro | Feita. Importação com resolução de materiais, módulos, peças, regras do projeto |
+| 8: plano de corte | Feita. Sem fila (decisão 8.1); visualizador com sequência de cortes e fixação de peças |
+| 9: saídas | Feita. ZIP verificado, PDFs de desenho, etiquetas (QR) e relatório |
+| 10: fechamento | Feita, exceto 10.3 (validação na máquina real) |
+
+Testes: 136 de unidade/integração; 40 cenários no navegador (desktop e tablet), também contra a build de produção e pelo IP da rede. Stack Docker testada de ponta a ponta.
+
+### Pendências
+
+1. **Validar na CVL** (10.3): importar o ZIP no supervisório e cortar uma chapa de teste; anotar a espessura real da serra.
+2. **Publicação:** o repositório no GitHub é **público** e o histórico tem dados reais em `.doc/models` (nome de cliente, número de série/código da licença do Promob, projeto `angela.*`). Antes de enviar: tornar o repositório privado ou anonimizar o histórico.
+3. Mais amostras de XML/.prog: confirmar a convenção dos lados da fita, se portas e fundos vêm em alguma listagem do Promob e o sarrafo cortado em outra cor.
+4. Imagem Docker de 1,8 GB: dá para enxugar (saída standalone do Next) numa próxima versão.
+
 ## Ambiente
 
-- Node 24, **pnpm** via corepack, Docker (PostgreSQL 16 em `docker-compose.yml`)
-- Monorepo com pnpm workspaces, TypeScript 5 em modo `strict`, **Vitest**, **fast-check** (testes de propriedade), ESLint e Prettier
+- Node 24, **npm workspaces** (o pnpm via corepack exigiria permissão de administrador nesta máquina), Docker (PostgreSQL 16 em `docker-compose.yml`)
+- Monorepo com npm workspaces, TypeScript 5 em modo `strict`, **Vitest**, **fast-check** (testes de propriedade), ESLint e Prettier
 - Os arquivos de `.doc/models/` são **fixtures de teste**, referenciados por caminho (não copiados)
 
 ## Estrutura final
@@ -33,9 +56,9 @@ Dependências entre pacotes (sem ciclos): `core` ← `promob`, `cvl`, `otimizado
 ## Fase 0: Fundação do repositório
 
 ### Tarefa 0.1: Monorepo
-- Criar: `package.json` (raiz, `"private": true`, scripts `test`, `lint`, `typecheck`, `build`), `pnpm-workspace.yaml` (`apps/*`, `packages/*`), `tsconfig.base.json` (strict, `moduleResolution: bundler`, `target: ES2022`), `.gitignore` (node_modules, .next, dist, .env*, coverage), `.editorconfig`, `.prettierrc`, `eslint.config.mjs`, `vitest.workspace.ts`
-- `corepack enable && pnpm install`
-- **Pronto quando:** `pnpm test` roda (0 testes) e `pnpm typecheck` passa
+- Criar: `package.json` (raiz, `"private": true`, scripts `test`, `lint`, `typecheck`, `build`), `workspaces` no package.json (`apps/*`, `packages/*`), `tsconfig.base.json` (strict, `moduleResolution: bundler`, `target: ES2022`), `.gitignore` (node_modules, .next, dist, .env*, coverage), `.editorconfig`, `.prettierrc`, `eslint.config.mjs`, `vitest.workspace.ts`
+- `npm install`
+- **Pronto quando:** `npm test` roda e `npm run typecheck` passa
 - Commit: `chore: monorepo base (pnpm, ts, vitest, eslint)`
 
 ### Tarefa 0.2: Pacote `core` com tipos de domínio
@@ -141,7 +164,7 @@ Dependências entre pacotes (sem ciclos): `core` ← `promob`, `cvl`, `otimizado
 - Commit: `feat(otimizador): fixar peça em chapa e material alternativo`
 
 ### Tarefa 3.5: Métricas
-- `metricas(plano)`: por chapa (área de peças, área da chapa, %, sobra útil, perda), por material e total do projeto, como em §8.1 do design
+- `metricas(plano)`: por chapa (área de peças, área da chapa, %, sobra útil, perda), por material e total do projeto, como em §8.1 do design. **Feito no `core`**, porque o visualizador e o relatório usam as métricas sem depender do otimizador
 - Commit: `feat(otimizador): métricas de aproveitamento`
 
 ---
@@ -214,7 +237,7 @@ Um commit por tarefa.
 
 ## Fase 8: Plano de corte
 
-- **8.1 Fila e worker:** `pg-boss` (fila no próprio Postgres). O job `otimizar(projetoId)` roda `otimizador` por material e grava PlanoDeCorte, Chapa e PecaNoPlano (nova versão). A tela consulta o progresso.
+- **8.1 Otimização na ação do servidor** (decisão em 23/11/2026): sem fila/worker na v1. A cozinha otimiza em < 0,1 s e projetos grandes em poucos segundos com limite de tempo por material, então a fila só traria um processo a mais para instalar. A ação grava o PlanoDeCorte (nova versão, a anterior fica como histórico) com cópia das peças e materiais. Se ficar lento, entra pg-boss sem mudar a interface.
 - **8.2 Visualizador** (design §8.1):
   - resumo (projeto e material)
   - miniaturas com %
@@ -238,7 +261,7 @@ Um commit por tarefa.
 ## Fase 10: Fechamento da v1
 
 - **10.1** Teste ponta a ponta (Playwright): login, cliente, projeto, importar a cozinha, otimizar, ver o plano, baixar o ZIP. O ZIP precisa conter 5 `.prog` válidos.
-- **10.2** README com como rodar (`docker compose up`, `pnpm dev`) e como instalar na marcenaria
+- **10.2** README com como rodar (`docker compose up`, `npm run dev`) e como instalar na marcenaria
 - **10.3** Validação na máquina real: importar um ZIP gerado no supervisório da CVL e cortar uma chapa de teste
 
 ---

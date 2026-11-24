@@ -1,0 +1,30 @@
+{
+  "name": "@pro-cutter/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev && prisma generate",
+    "seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate",
+    "migrate:deploy": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@pro-cutter/core": "0.0.0",
+    "@pro-cutter/regras": "0.0.0",
+    "@pro-cutter/promob": "0.0.0",
+    "@prisma/client": "7.10.1",
+    "@prisma/adapter-pg": "7.10.1",
+    "@node-rs/argon2": "^2.2.2",
+    "dotenv": "^18.0.10",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "prisma": "7.10.1",
+    "tsx": "^4.20.0"
+  }
+}

@@ -1,0 +1,37 @@
+# pro-cutter na marcenaria: banco + app. Uso:
+#   cp .env.producao.example .env.producao   (e ajuste as senhas)
+#   docker compose -f docker-compose.producao.yml --env-file .env.producao up -d --build
+name: pro-cutter
+
+services:
+  banco:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: procutter
+      POSTGRES_PASSWORD: ${POSTGRES_SENHA:?defina POSTGRES_SENHA no .env.producao}
+      POSTGRES_DB: procutter
+    volumes:
+      - dados:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U procutter']
+      interval: 5s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      banco:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://procutter:${POSTGRES_SENHA}@banco:5432/procutter
+      SEED_EMPRESA: ${SEED_EMPRESA:-Minha Marcenaria}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@procutter.local}
+      SEED_ADMIN_SENHA: ${SEED_ADMIN_SENHA:?defina SEED_ADMIN_SENHA no .env.producao}
+      COOKIE_SEGURO: ${COOKIE_SEGURO:-}
+    ports:
+      - '${PORTA:-3000}:3000'
+
+volumes:
+  dados:

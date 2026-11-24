@@ -2,3 +2,4 @@
 - [UI moderna](feedback-ui-moderna.md) — usuário quer visual moderno e fácil de usar (shadcn/ui + Tailwind)
 - [Publicação no GitHub](project-publicacao-github.md) — repo público + dados reais no histórico: não dar push sem privado/anonimizar
 - [Deploy na VPS](project-deploy-vps.md) — procutter.bsuite.tech na bem-vps, /opt/pro-cutter, publicar.sh; VPS dividida, não compilar lá
+- [Commitar a memória](feedback-commitar-memoria.md) — .claude/memory vai junto em todo commit

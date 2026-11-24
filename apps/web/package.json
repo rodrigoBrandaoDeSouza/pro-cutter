@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e:producao": "cross-env NEXT_DIST_DIR=.next-build next build && cross-env E2E_PRODUCAO=1 playwright test"
   },
   "dependencies": {
     "@pro-cutter/core": "0.0.0",
@@ -42,6 +43,7 @@
     "pg": "^8.23.1",
     "@types/pg": "^8.15.0",
     "fflate": "^0.8.3",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "cross-env": "^10.1.0"
   }
 }

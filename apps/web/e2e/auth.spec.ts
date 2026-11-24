@@ -27,6 +27,9 @@ test('admin entra, volta para a página pedida e vê o menu de administração',
 }, info) => {
   await entrar(page, ADMIN, '/clientes');
   await expect(page).toHaveURL(/\/clientes$/);
+  // a sessão precisa sobreviver a um recarregamento (cookie realmente guardado pelo navegador)
+  await page.reload();
+  await expect(page).toHaveURL(/\/clientes$/);
   await expect(page.getByRole('heading', { name: 'Clientes' })).toBeVisible();
   if (info.project.name === 'tablet')
     await page.getByRole('button', { name: 'Abrir menu' }).click();

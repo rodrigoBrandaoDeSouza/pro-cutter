@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { entrar, sair } from '@pro-cutter/db';
 import { prisma } from '@/lib/server/db';
 import { excedeuLimite, zerarLimite } from '@/lib/server/limite';
-import { COOKIE_SESSAO, OPCOES_COOKIE } from '@/lib/server/sessao';
+import { COOKIE_SESSAO, opcoesCookie } from '@/lib/server/sessao';
 
 export interface EstadoEntrar {
   erro?: string;
@@ -41,7 +41,7 @@ export async function entrarAction(_: EstadoEntrar, form: FormData): Promise<Est
   if (!r) return { erro: 'E-mail ou senha incorretos.', email };
 
   zerarLimite(chave);
-  (await cookies()).set(COOKIE_SESSAO, r.token, OPCOES_COOKIE);
+  (await cookies()).set(COOKIE_SESSAO, r.token, await opcoesCookie());
   redirect(destinoSeguro(dados.data.de));
 }
 

@@ -1,20 +1,38 @@
 import 'server-only';
 import { cache } from 'react';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { daEmpresa, sessaoAtual, type UsuarioSessao } from '@pro-cutter/db';
 import { prisma } from './db';
 
 export const COOKIE_SESSAO = 'pc_sessao';
 
-/** O banco controla a validade (30 dias renováveis); o cookie só precisa durar mais que isso. */
-export const OPCOES_COOKIE = {
-  httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: 'lax' as const,
-  path: '/',
-  maxAge: 400 * 24 * 60 * 60,
-};
+/**
+ * Opções do cookie de sessão. O banco controla a validade (30 dias renováveis); o cookie só precisa
+ * durar mais que isso. `secure` só quando o acesso chega por HTTPS: na marcenaria é comum usar
+ * http://ip-do-servidor na rede local, e um cookie `secure` seria descartado pelo navegador
+ * (o login falharia sem erro). COOKIE_SEGURO=1 ou 0 força o comportamento.
+ */
+export async function opcoesCookie() {
+  const forcado = process.env.COOKIE_SEGURO;
+  let secure: boolean;
+  if (forcado === '1' || forcado === '0') {
+    secure = forcado === '1';
+  } else {
+    const h = await headers();
+    const proto =
+      h.get('x-forwarded-proto')?.split(',')[0]?.trim() ??
+      new URL(h.get('origin') ?? 'http://x').protocol.replace(':', '');
+    secure = proto === 'https';
+  }
+  return {
+    httpOnly: true,
+    secure,
+    sameSite: 'lax' as const,
+    path: '/',
+    maxAge: 400 * 24 * 60 * 60,
+  };
+}
 
 /** Usuário logado (uma consulta por requisição), ou null. */
 export const obterUsuario = cache(async (): Promise<UsuarioSessao | null> => {

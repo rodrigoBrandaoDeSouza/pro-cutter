@@ -8,8 +8,10 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "migrate": "prisma migrate dev",
-    "seed": "tsx prisma/seed.ts"
+    "migrate": "prisma migrate dev && prisma generate",
+    "seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate",
+    "migrate:deploy": "prisma migrate deploy"
   },
   "dependencies": {
     "@pro-cutter/core": "0.0.0",

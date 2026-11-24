@@ -41,6 +41,7 @@ export async function criarEmpresa(prisma: PrismaClient, dados: NovaEmpresa) {
         email: dados.admin.email.trim().toLowerCase(),
         senhaHash,
         papel: 'ADMIN',
+        deveTrocarSenha: true,
       },
     });
     return { empresa, admin };

@@ -138,3 +138,37 @@ describe('autenticação', () => {
     await prisma.usuario.update({ where: { id: empB.admin.id }, data: { ativo: true } });
   });
 });
+
+describe('trocarSenha', () => {
+  it('confere a atual, exige senha nova diferente e derruba as sessões', async () => {
+    const { trocarSenha } = await import('./auth.ts');
+    const u = await criarEmpresa(prisma, {
+      nome: 'Marcenaria C',
+      admin: { nome: 'Carla', email: 'carla@c.com', senha: 'senha-inicial-c' },
+    });
+    expect(
+      (await prisma.usuario.findUniqueOrThrow({ where: { id: u.admin.id } })).deveTrocarSenha,
+    ).toBe(true);
+    const sessao = await entrar(prisma, 'carla@c.com', 'senha-inicial-c');
+    expect(sessao!.usuario.deveTrocarSenha).toBe(true);
+
+    expect(await trocarSenha(prisma, u.admin.id, 'errada', 'nova-senha-c')).toMatchObject({
+      ok: false,
+      campo: 'atual',
+    });
+    expect(await trocarSenha(prisma, u.admin.id, 'senha-inicial-c', '123')).toMatchObject({
+      ok: false,
+      campo: 'nova',
+    });
+    expect(
+      await trocarSenha(prisma, u.admin.id, 'senha-inicial-c', 'senha-inicial-c'),
+    ).toMatchObject({ ok: false, campo: 'nova' });
+    expect(await trocarSenha(prisma, u.admin.id, 'senha-inicial-c', 'nova-senha-c')).toEqual({
+      ok: true,
+    });
+
+    expect(await sessaoAtual(prisma, sessao!.token)).toBeNull();
+    const nova = await entrar(prisma, 'carla@c.com', 'nova-senha-c');
+    expect(nova!.usuario.deveTrocarSenha).toBe(false);
+  });
+});

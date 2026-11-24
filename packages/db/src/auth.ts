@@ -39,6 +39,8 @@ export interface UsuarioSessao {
   nome: string;
   email: string;
   papel: 'ADMIN' | 'USUARIO';
+  /** A senha foi definida por outra pessoa: o app pede para trocar. */
+  deveTrocarSenha: boolean;
 }
 
 /** Retorna o token da nova sessão (para o cookie) ou null se e-mail/senha não conferem. */
@@ -99,6 +101,38 @@ function paraSessao(u: {
   nome: string;
   email: string;
   papel: 'ADMIN' | 'USUARIO';
+  deveTrocarSenha: boolean;
 }): UsuarioSessao {
-  return { id: u.id, empresaId: u.empresaId, nome: u.nome, email: u.email, papel: u.papel };
+  return {
+    id: u.id,
+    empresaId: u.empresaId,
+    nome: u.nome,
+    email: u.email,
+    papel: u.papel,
+    deveTrocarSenha: u.deveTrocarSenha,
+  };
+}
+
+/** Troca a própria senha: confere a atual, grava a nova e encerra todas as sessões do usuário. */
+export async function trocarSenha(
+  prisma: PrismaClient,
+  usuarioId: string,
+  atual: string,
+  nova: string,
+): Promise<{ ok: true } | { ok: false; campo: 'atual' | 'nova'; erro: string }> {
+  const u = await prisma.usuario.findUnique({ where: { id: usuarioId } });
+  if (!u || !(await verificarSenha(u.senhaHash, atual))) {
+    return { ok: false, campo: 'atual', erro: 'Senha atual incorreta' };
+  }
+  const erro = validarSenhaNova(nova);
+  if (erro) return { ok: false, campo: 'nova', erro };
+  if (await verificarSenha(u.senhaHash, nova)) {
+    return { ok: false, campo: 'nova', erro: 'A nova senha precisa ser diferente da atual' };
+  }
+  await prisma.usuario.update({
+    where: { id: usuarioId },
+    data: { senhaHash: await hashSenha(nova), deveTrocarSenha: false },
+  });
+  await encerrarSessoes(prisma, usuarioId);
+  return { ok: true };
 }

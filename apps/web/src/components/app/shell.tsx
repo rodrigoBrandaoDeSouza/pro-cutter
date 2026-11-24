@@ -6,6 +6,7 @@ import { useState, useTransition } from 'react';
 import { useTheme } from 'next-themes';
 import {
   FolderKanban,
+  KeyRound,
   LogOut,
   Menu,
   Monitor,
@@ -33,11 +34,13 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
+import { AvisoTrocarSenha, DialogoTrocarSenha } from './trocar-senha';
 
 export interface UsuarioShell {
   nome: string;
   email: string;
   papel: 'ADMIN' | 'USUARIO';
+  deveTrocarSenha: boolean;
 }
 
 interface ItemNav {
@@ -56,6 +59,7 @@ const NAV: ItemNav[] = [
 
 export function Shell({ usuario, children }: { usuario: UsuarioShell; children: React.ReactNode }) {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [trocandoSenha, setTrocandoSenha] = useState(false);
   const itens = NAV.filter((i) => !i.admin || usuario.papel === 'ADMIN');
 
   return (
@@ -68,7 +72,7 @@ export function Shell({ usuario, children }: { usuario: UsuarioShell; children: 
         </div>
         <Navegacao itens={itens} />
         <div className="mt-auto border-t p-3">
-          <MenuUsuario usuario={usuario} />
+          <MenuUsuario usuario={usuario} aoTrocarSenha={() => setTrocandoSenha(true)} />
         </div>
       </aside>
 
@@ -87,10 +91,14 @@ export function Shell({ usuario, children }: { usuario: UsuarioShell; children: 
         <Link href="/projetos" className="mr-auto">
           <Logo />
         </Link>
-        <MenuUsuario usuario={usuario} compacto />
+        <MenuUsuario usuario={usuario} compacto aoTrocarSenha={() => setTrocandoSenha(true)} />
       </header>
 
-      <main className="min-w-0">{children}</main>
+      <main className="min-w-0">
+        {usuario.deveTrocarSenha && <AvisoTrocarSenha aoTrocar={() => setTrocandoSenha(true)} />}
+        {children}
+      </main>
+      <DialogoTrocarSenha aberto={trocandoSenha} aoMudar={setTrocandoSenha} />
     </div>
   );
 }
@@ -130,7 +138,15 @@ function iniciais(nome: string): string {
   ).toUpperCase();
 }
 
-function MenuUsuario({ usuario, compacto }: { usuario: UsuarioShell; compacto?: boolean }) {
+function MenuUsuario({
+  usuario,
+  compacto,
+  aoTrocarSenha,
+}: {
+  usuario: UsuarioShell;
+  compacto?: boolean;
+  aoTrocarSenha: () => void;
+}) {
   const { theme, setTheme } = useTheme();
   const [saindo, iniciar] = useTransition();
 
@@ -188,6 +204,9 @@ function MenuUsuario({ usuario, compacto }: { usuario: UsuarioShell; compacto?: 
           </DropdownMenuRadioGroup>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={aoTrocarSenha}>
+          <KeyRound /> Trocar minha senha
+        </DropdownMenuItem>
         <DropdownMenuItem disabled={saindo} onClick={() => iniciar(() => sairAction())}>
           <LogOut /> Sair
         </DropdownMenuItem>

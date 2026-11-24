@@ -72,6 +72,8 @@ model Usuario {
   senhaHash String
   papel     Papel     @default(USUARIO)
   ativo     Boolean   @default(true)
+  /// Senha definida por outra pessoa (seed ou admin): pedir troca no primeiro acesso
+  deveTrocarSenha Boolean @default(false)
   criadoEm  DateTime  @default(now())
   sessoes   Sessao[]
 

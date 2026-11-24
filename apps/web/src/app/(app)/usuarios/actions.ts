@@ -37,7 +37,13 @@ export async function criarUsuario(entrada: z.input<typeof esquemaNovo>): Promis
   }
   try {
     await daEmpresa(prisma, admin.empresaId).usuario.create({
-      data: { ...dados, empresaId: admin.empresaId, senhaHash: await hashSenha(senha) },
+      data: {
+        ...dados,
+        empresaId: admin.empresaId,
+        senhaHash: await hashSenha(senha),
+        // senha definida pelo admin: a pessoa troca no primeiro acesso
+        deveTrocarSenha: true,
+      },
     });
   } catch (e) {
     return erroDoBanco(e);
@@ -71,7 +77,12 @@ export async function editarUsuario(entrada: z.input<typeof esquemaEdicao>): Pro
   try {
     await db.usuario.update({
       where: { id },
-      data: { ...dados, ...(novaSenha ? { senhaHash: await hashSenha(novaSenha) } : {}) },
+      data: {
+        ...dados,
+        ...(novaSenha
+          ? { senhaHash: await hashSenha(novaSenha), deveTrocarSenha: id !== admin.id }
+          : {}),
+      },
     });
   } catch (e) {
     return erroDoBanco(e);

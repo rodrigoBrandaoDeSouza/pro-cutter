@@ -18,23 +18,35 @@ DIR=/opt/pro-cutter
 RAIZ=$(cd "$(dirname "$0")/../.." && pwd)
 cd "$RAIZ"
 
-VERSAO=$(git rev-parse --short HEAD)
-[ -n "$(git status --porcelain)" ] && VERSAO="$VERSAO-$(date +%Y%m%d%H%M)"
+# VERSAO=<tag> publica (ou volta para) uma imagem já gerada, sem compilar de novo
+if [ -z "${VERSAO:-}" ]; then
+  VERSAO=$(git rev-parse --short HEAD)
+  [ -n "$(git status --porcelain)" ] && VERSAO="$VERSAO-$(date +%Y%m%d%H%M)"
+fi
 echo "==> versão $VERSAO"
 
-echo "==> gerando a imagem"
-docker build -t "pro-cutter:$VERSAO" .
+if docker image inspect "pro-cutter:$VERSAO" >/dev/null 2>&1; then
+  echo "==> imagem $VERSAO já existe aqui"
+else
+  echo "==> gerando a imagem"
+  docker build -t "pro-cutter:$VERSAO" .
+fi
 
-echo "==> enviando a imagem para $HOST (pode levar alguns minutos)"
-docker save "pro-cutter:$VERSAO" | gzip -1 | ssh "$HOST" 'gunzip | docker load'
+if ssh "$HOST" "docker image inspect pro-cutter:$VERSAO >/dev/null 2>&1"; then
+  echo "==> a VPS já tem a imagem $VERSAO"
+else
+  echo "==> enviando a imagem para $HOST (pode levar alguns minutos)"
+  docker save "pro-cutter:$VERSAO" | gzip -1 | ssh "$HOST" 'gunzip | docker load'
+fi
 
 ssh "$HOST" "mkdir -p $DIR/backups"
 scp -q deploy/vps/docker-compose.yml "$HOST:$DIR/docker-compose.yml"
 scp -q deploy/vps/nginx.conf "$HOST:$DIR/nginx.conf"
 
-ssh "$HOST" \
-  VERSAO="$VERSAO" DIR="$DIR" DOMINIOS="${DOMINIOS:-}" ADMIN_EMAIL="${ADMIN_EMAIL:-}" \
-  EMPRESA="${EMPRESA:-Minha Marcenaria}" PORTA="${PORTA:-3020}" bash -s <<'REMOTO'
+# O ssh junta os argumentos num texto só: cada valor vai escapado (%q) para não quebrar nos espaços
+VARS=$(printf '%q=%q ' VERSAO "$VERSAO" DIR "$DIR" DOMINIOS "${DOMINIOS:-}" \
+  ADMIN_EMAIL "${ADMIN_EMAIL:-}" EMPRESA "${EMPRESA:-Minha Marcenaria}" PORTA "${PORTA:-3020}")
+ssh "$HOST" "$VARS bash -s" <<'REMOTO'
 set -euo pipefail
 cd "$DIR"
 

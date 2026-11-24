@@ -20,6 +20,8 @@ export interface CortePosicionado {
   de: number;
   ate: number;
   refilo: boolean;
+  /** Medida do corte como aparece na máquina: o refilo, ou a medida do nó (igual ao value do .prog). */
+  medida: number;
 }
 
 export interface Sobra {
@@ -77,13 +79,15 @@ function subdividir(
 
   let p = inicio;
   if (refilo > 0) {
-    g.cortes.push({ nivel, eixo, pos: p + refilo, de, ate, refilo: true });
+    g.cortes.push({ nivel, eixo, pos: p + refilo, de, ate, refilo: true, medida: refilo });
     p += refilo + op.serra;
   }
 
   for (const no of nos) {
     const fim = p + no.medida;
-    if (fim < limite) g.cortes.push({ nivel: no.nivel, eixo, pos: fim, de, ate, refilo: false });
+    if (fim < limite) {
+      g.cortes.push({ nivel: no.nivel, eixo, pos: fim, de, ate, refilo: false, medida: no.medida });
+    }
 
     const filho: Regiao =
       eixo === 'X'

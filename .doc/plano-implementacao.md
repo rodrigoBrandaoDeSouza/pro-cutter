@@ -214,7 +214,7 @@ Um commit por tarefa.
 
 ## Fase 8: Plano de corte
 
-- **8.1 Fila e worker:** `pg-boss` (fila no próprio Postgres). O job `otimizar(projetoId)` roda `otimizador` por material e grava PlanoDeCorte, Chapa e PecaNoPlano (nova versão). A tela consulta o progresso.
+- **8.1 Otimização na ação do servidor** (decisão em 23/11/2026): sem fila/worker na v1. A cozinha otimiza em < 0,1 s e projetos grandes em poucos segundos com limite de tempo por material, então a fila só traria um processo a mais para instalar. A ação grava o PlanoDeCorte (nova versão, a anterior fica como histórico) com cópia das peças e materiais. Se ficar lento, entra pg-boss sem mudar a interface.
 - **8.2 Visualizador** (design §8.1):
   - resumo (projeto e material)
   - miniaturas com %

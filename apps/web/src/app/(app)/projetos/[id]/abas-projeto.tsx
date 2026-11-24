@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import { Boxes, History, LayoutGrid, Scissors, SlidersHorizontal } from 'lucide-react';
 import type { TipoModulo, ValoresRegras } from '@pro-cutter/regras';
-import { EstadoVazio } from '@/components/app/cabecalho';
 import { quando, SeloStatus } from '@/components/app/status';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import type { Status } from '@/lib/status';
 import { AbaAmbientes } from './aba-ambientes';
 import { AbaPecas } from './aba-pecas';
+import { AbaPlano, type PlanoVM } from './aba-plano';
 import { AbaRegrasProjeto } from './aba-regras-projeto';
 import type { AmbienteVM, MaterialVM, ModuloVM, ParametroVM, PecaVM } from './tipos';
 
@@ -32,6 +32,7 @@ export function AbasProjeto(props: {
   tipos: TipoModulo[];
   regras: ValoresRegras;
   parametros: ParametroVM[];
+  plano: PlanoVM | null;
   historico: ItemHistorico[];
 }) {
   const inicial = ABAS.find((a) => a === props.abaInicial) ?? 'ambientes';
@@ -59,6 +60,9 @@ export function AbasProjeto(props: {
           </TabsTrigger>
           <TabsTrigger value="plano">
             <Scissors /> Plano de corte
+            {props.plano?.status === 'DESATUALIZADO' && (
+              <span className="size-2 rounded-full bg-warning" aria-label="plano desatualizado" />
+            )}
           </TabsTrigger>
           <TabsTrigger value="regras">
             <SlidersHorizontal /> Regras
@@ -90,11 +94,15 @@ export function AbasProjeto(props: {
           materiais={props.materiais}
         />
       </TabsContent>
-      <TabsContent value="plano">
-        <EstadoVazio
-          icone={<Scissors />}
-          titulo="Plano de corte"
-          descricao="A otimização e o visualizador de chapas chegam na próxima etapa."
+      <TabsContent value="plano" className="mt-6">
+        <AbaPlano
+          projetoId={props.projetoId}
+          plano={props.plano}
+          totalPecas={totalPecas}
+          nomes={{
+            ambientes: Object.fromEntries(props.ambientes.map((x) => [x.id, x.nome])),
+            modulos: Object.fromEntries(props.modulos.map((x) => [x.id, x.nome])),
+          }}
         />
       </TabsContent>
       <TabsContent value="regras" className="mt-6">

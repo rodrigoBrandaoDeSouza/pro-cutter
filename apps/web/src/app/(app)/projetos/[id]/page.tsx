@@ -8,6 +8,7 @@ import { lerConfiguracao } from '@/lib/server/config';
 import { dbDoUsuario } from '@/lib/server/sessao';
 import { formatarTelefone } from '@/lib/telefone';
 import { AbasProjeto, AcoesProjeto, MenuStatus } from './projeto-cliente';
+import type { PlanoVM } from './aba-plano';
 import type { PecaVM } from './tipos';
 
 export async function generateMetadata({ params }: PageProps<'/projetos/[id]'>): Promise<Metadata> {
@@ -29,6 +30,7 @@ export default async function PaginaProjeto({ params, searchParams }: PageProps<
       cliente: true,
       historico: { orderBy: { em: 'desc' }, take: 50 },
       ambientes: { orderBy: { ordem: 'asc' }, include: { modulos: { orderBy: { ordem: 'asc' } } } },
+      planos: { orderBy: { versao: 'desc' }, take: 1 },
     },
   });
   if (!projeto) notFound();
@@ -46,6 +48,20 @@ export default async function PaginaProjeto({ params, searchParams }: PageProps<
   const nomeUsuario = new Map(usuarios.map((u) => [u.id, u.nome]));
   const regrasProjeto = projeto.regras as unknown as ValoresRegras;
   const padroes = new Map(cfg.regras.map((r) => [r.chave, r]));
+  const ultimo = projeto.planos[0];
+  const plano: PlanoVM | null = ultimo
+    ? {
+        id: ultimo.id,
+        versao: ultimo.versao,
+        status: ultimo.status,
+        criadoEm: ultimo.criadoEm.toISOString(),
+        criadoPor: nomeUsuario.get(ultimo.criadoPorId) ?? 'usuário removido',
+        parametros: ultimo.parametros as unknown as PlanoVM['parametros'],
+        chapas: ultimo.chapas as unknown as PlanoVM['chapas'],
+        pecas: ultimo.pecas as unknown as PlanoVM['pecas'],
+        materiais: ultimo.materiais as unknown as PlanoVM['materiais'],
+      }
+    : null;
 
   return (
     <>
@@ -154,6 +170,7 @@ export default async function PaginaProjeto({ params, searchParams }: PageProps<
               ...(p ? { padrao: p.valor } : {}),
             };
           })}
+          plano={plano}
           historico={projeto.historico.map((h) => ({
             id: h.id,
             de: h.de,

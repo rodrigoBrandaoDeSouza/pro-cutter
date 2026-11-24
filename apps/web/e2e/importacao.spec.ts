@@ -1,30 +1,12 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { expect, test, type Page } from '@playwright/test';
-import { COMUM, entrar, unico } from './ajuda';
-
-const XML = readFileSync(join(__dirname, '../../../.doc/models/Everaldo cozinha.xml'));
-
-async function criarProjeto(page: Page, nome: string) {
-  await page.goto('/projetos');
-  await page.getByRole('button', { name: 'Novo projeto' }).first().click();
-  const dlg = page.getByRole('dialog', { name: 'Novo projeto' });
-  await dlg.getByLabel('Nome do projeto').fill(nome);
-  await dlg.getByRole('button', { name: 'Cadastrar cliente novo' }).click();
-  const c = page.getByRole('dialog', { name: 'Novo cliente' });
-  await c.getByLabel('Nome').fill(`Cliente ${nome}`);
-  await c.getByRole('button', { name: 'Cadastrar' }).click();
-  await expect(c).toBeHidden();
-  await dlg.getByRole('button', { name: 'Criar projeto' }).click();
-  await expect(page.getByRole('heading', { name: nome })).toBeVisible();
-}
-
-async function importar(page: Page, rotulo: string, nomeArquivo: string, conteudo: Buffer) {
-  await page
-    .getByLabel(rotulo)
-    .setInputFiles({ name: nomeArquivo, mimeType: 'text/xml', buffer: conteudo });
-  await expect(page.getByRole('dialog')).toBeVisible();
-}
+import { expect, test } from '@playwright/test';
+import {
+  COMUM,
+  criarProjeto,
+  entrar,
+  enviarXml as importar,
+  unico,
+  XML_COZINHA as XML,
+} from './ajuda';
 
 test('importa a cozinha, cria módulo, ajusta regra, peça avulsa e reimporta', async ({
   page,

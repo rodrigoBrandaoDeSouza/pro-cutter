@@ -17,7 +17,8 @@
     "format": "prettier --write .",
     "db:up": "docker compose up -d",
     "db:migrate": "npm run migrate -w @pro-cutter/db",
-    "db:seed": "npm run seed -w @pro-cutter/db"
+    "db:seed": "npm run seed -w @pro-cutter/db",
+    "db:seed-demo": "npm run seed-demo -w @pro-cutter/web --"
   },
   "engines": {
     "node": ">=22"

@@ -35,9 +35,9 @@ enum StatusPlano {
 }
 
 model Empresa {
-  id           String         @id @default(cuid())
+  id           String        @id @default(cuid())
   nome         String
-  criadoEm     DateTime       @default(now())
+  criadoEm     DateTime      @default(now())
   configuracao Configuracao?
   usuarios     Usuario[]
   materiais    Material[]
@@ -49,33 +49,35 @@ model Empresa {
 
 /// Configurações da marcenaria. Estruturas editáveis ficam em JSON versionado (ver packages/db/src/config.ts).
 model Configuracao {
-  id          String  @id @default(cuid())
-  empresaId   String  @unique
-  empresa     Empresa @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  id                       String  @id @default(cuid())
+  empresaId                String  @unique
+  empresa                  Empresa @relation(fields: [empresaId], references: [id], onDelete: Cascade)
   /// ParametroRegra[]
-  regras      Json
+  regras                   Json
   /// TipoModulo[]
-  tiposModulo Json
+  tiposModulo              Json
   /// mapaGrupos, origemPorTipo, ladosFita
-  importacao  Json
+  importacao               Json
   /// { largura, altura } em mm
-  etiqueta    Json
-  versao      Int     @default(1)
+  etiqueta                 Json
+  versao                   Int     @default(1)
+  /// Aproveitamento de comparação do painel (0 a 1): "quanto aproveitaríamos sem o pro-cutter"
+  aproveitamentoReferencia Float   @default(0.7)
 }
 
 model Usuario {
-  id        String    @id @default(cuid())
-  empresaId String
-  empresa   Empresa   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
-  nome      String
-  email     String    @unique
-  senhaHash String
-  papel     Papel     @default(USUARIO)
-  ativo     Boolean   @default(true)
+  id              String   @id @default(cuid())
+  empresaId       String
+  empresa         Empresa  @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  nome            String
+  email           String   @unique
+  senhaHash       String
+  papel           Papel    @default(USUARIO)
+  ativo           Boolean  @default(true)
   /// Senha definida por outra pessoa (seed ou admin): pedir troca no primeiro acesso
-  deveTrocarSenha Boolean @default(false)
-  criadoEm  DateTime  @default(now())
-  sessoes   Sessao[]
+  deveTrocarSenha Boolean  @default(false)
+  criadoEm        DateTime @default(now())
+  sessoes         Sessao[]
 
   @@index([empresaId])
 }
@@ -105,6 +107,8 @@ model Material {
   /// Atributo `material` do .prog da CVL (ex.: "MDF-15-Branco-MDF Branco 15mm")
   textoProg        String?
   ativo            Boolean  @default(true)
+  /// Preço de uma chapa inteira em R$ (opcional; usado no painel para custo e desperdício)
+  precoChapa       Float?
   pecas            Peca[]
 
   @@index([empresaId])
@@ -257,22 +261,22 @@ model Peca {
 /// Versão de plano de corte de um projeto. As árvores de corte e a cópia das peças ficam em JSON,
 /// para que etiquetas e .prog continuem fiéis ao plano mesmo que as peças mudem depois.
 model PlanoDeCorte {
-  id            String      @id @default(cuid())
-  empresaId     String
-  projetoId     String
-  projeto       Projeto     @relation(fields: [projetoId], references: [id], onDelete: Cascade)
-  versao        Int
-  status        StatusPlano @default(ATUAL)
+  id          String      @id @default(cuid())
+  empresaId   String
+  projetoId   String
+  projeto     Projeto     @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  versao      Int
+  status      StatusPlano @default(ATUAL)
   /// ParametrosCorte usados
-  parametros    Json
+  parametros  Json
   /// ChapaPlano[]
-  chapas        Json
+  chapas      Json
   /// Peca[] (cópia no momento da otimização)
-  pecas         Json
+  pecas       Json
   /// Material[] (cópia no momento da otimização)
-  materiais     Json
-  criadoPorId   String
-  criadoEm      DateTime    @default(now())
+  materiais   Json
+  criadoPorId String
+  criadoEm    DateTime    @default(now())
 
   @@unique([projetoId, versao])
   @@index([empresaId, projetoId])

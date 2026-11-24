@@ -34,6 +34,7 @@ export interface MaterialLista {
   chapaComprimento: number;
   chapaLargura: number;
   temVeio: boolean;
+  precoChapa: number | null;
   chavesPromob: string[];
   textoProg: string;
   ativo: boolean;
@@ -91,6 +92,14 @@ export function AbaMateriais({
                     </TableCell>
                     <TableCell className="tabular-nums">
                       {mmBR(m.chapaComprimento)} × {mmBR(m.chapaLargura)}
+                      <div className="text-xs text-muted-foreground">
+                        {m.precoChapa == null
+                          ? 'sem preço'
+                          : m.precoChapa.toLocaleString('pt-BR', {
+                              style: 'currency',
+                              currency: 'BRL',
+                            })}
+                      </div>
                     </TableCell>
                     <TableCell className="hidden md:table-cell">
                       <div className="flex flex-wrap gap-1">
@@ -155,6 +164,13 @@ export function AbaMateriais({
   );
 }
 
+/** "1.289,90" ou "289.9" → número em texto; vazio → null. Com vírgula, os pontos são milhar. */
+function lerPreco(s: string): string | null {
+  const t = s.replace(/R\$|\s/g, '');
+  if (!t) return null;
+  return t.includes(',') ? t.replaceAll('.', '').replace(',', '.') : t;
+}
+
 function DialogoMaterial({ material }: { material?: MaterialLista }) {
   const vazio = {
     descricao: '',
@@ -162,6 +178,7 @@ function DialogoMaterial({ material }: { material?: MaterialLista }) {
     chapaComprimento: '2750',
     chapaLargura: '1830',
     temVeio: false,
+    preco: '',
     chaves: '',
     textoProg: '',
     ativo: true,
@@ -184,6 +201,7 @@ function DialogoMaterial({ material }: { material?: MaterialLista }) {
             chapaComprimento: String(material.chapaComprimento),
             chapaLargura: String(material.chapaLargura),
             temVeio: material.temVeio,
+            preco: material.precoChapa == null ? '' : String(material.precoChapa).replace('.', ','),
             chaves: material.chavesPromob.join('\n'),
             textoProg: material.textoProg,
             ativo: material.ativo,
@@ -225,6 +243,7 @@ function DialogoMaterial({ material }: { material?: MaterialLista }) {
               chapaComprimento: num(f.chapaComprimento),
               chapaLargura: num(f.chapaLargura),
               temVeio: f.temVeio,
+              precoChapa: lerPreco(f.preco),
               chavesPromob: f.chaves
                 .split(/\n|;/)
                 .map((s) => s.trim())
@@ -278,6 +297,22 @@ function DialogoMaterial({ material }: { material?: MaterialLista }) {
               />
             </Campo>
           </div>
+          <Campo
+            id="m-preco"
+            rotulo="Preço da chapa (R$, opcional)"
+            erro={erros.precoChapa}
+            dica="Preço de uma chapa inteira. Usado no Painel para custo, desperdício e economia."
+          >
+            <Input
+              id="m-preco"
+              inputMode="decimal"
+              placeholder="Ex.: 289,90"
+              value={f.preco}
+              onChange={(e) => setF({ ...f, preco: e.target.value })}
+              aria-invalid={!!erros.precoChapa}
+              className="tabular-nums"
+            />
+          </Campo>
           <label className="flex items-start gap-2 text-sm">
             <input
               type="checkbox"

@@ -16,6 +16,7 @@ cp .env.example .env          # ajuste se precisar
 npm run db:up                 # PostgreSQL no Docker
 npm run db:migrate            # cria as tabelas
 npm run db:seed               # marcenaria inicial + admin
+npm run db:seed-demo          # opcional: ~44 projetos fictícios para ver o Painel (--recriar refaz)
 npm run dev                   # http://localhost:3000
 ```
 

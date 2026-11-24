@@ -32,6 +32,11 @@ const esquemaMaterial = z.object({
   chapaComprimento: mm('Comprimento', 100),
   chapaLargura: mm('Largura', 100),
   temVeio: z.boolean(),
+  precoChapa: z.coerce
+    .number({ error: 'Preço: informe um número' })
+    .min(0, 'Preço não pode ser negativo')
+    .nullable()
+    .default(null),
   chavesPromob: z.array(z.string().trim().min(1)).default([]),
   textoProg: z.string().trim().default(''),
   ativo: z.boolean().default(true),

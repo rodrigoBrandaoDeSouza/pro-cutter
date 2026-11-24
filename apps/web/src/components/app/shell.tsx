@@ -6,6 +6,7 @@ import { useState, useTransition } from 'react';
 import { useTheme } from 'next-themes';
 import {
   FolderKanban,
+  LayoutDashboard,
   KeyRound,
   LogOut,
   Menu,
@@ -51,6 +52,7 @@ interface ItemNav {
 }
 
 const NAV: ItemNav[] = [
+  { href: '/painel', rotulo: 'Painel', icone: LayoutDashboard },
   { href: '/projetos', rotulo: 'Projetos', icone: FolderKanban },
   { href: '/clientes', rotulo: 'Clientes', icone: Users },
   { href: '/configuracoes', rotulo: 'Configurações', icone: Settings, admin: true },

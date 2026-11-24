@@ -38,6 +38,7 @@ export default async function PaginaConfiguracoes({ searchParams }: PageProps<'/
             chapaComprimento: m.chapaComprimento,
             chapaLargura: m.chapaLargura,
             temVeio: m.temVeio,
+            precoChapa: m.precoChapa,
             chavesPromob: m.chavesPromob,
             textoProg: m.textoProg ?? '',
             ativo: m.ativo,

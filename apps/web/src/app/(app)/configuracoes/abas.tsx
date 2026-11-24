@@ -12,7 +12,7 @@ import { AbaRegras } from './aba-regras';
 const ABAS = [
   ['materiais', 'Materiais'],
   ['maquina', 'Máquina'],
-  ['regras', 'Regras'],
+  ['regras', 'Folgas e regras'],
   ['formulas', 'Fórmulas'],
   ['importacao', 'Importação e etiqueta'],
 ] as const;
@@ -48,19 +48,27 @@ export function AbasConfiguracao(props: {
           ))}
         </TabsList>
       </div>
-      <TabsContent value="materiais" className="mt-6">
+      <TabsContent value="materiais" className="mt-6" keepMounted>
         <AbaMateriais materiais={props.materiais} fitas={props.fitas} />
       </TabsContent>
-      <TabsContent value="maquina" className="mt-6">
+      <TabsContent value="maquina" className="mt-6" keepMounted>
         <AbaMaquina maquina={props.maquina} />
       </TabsContent>
-      <TabsContent value="regras" className="mt-6">
+      <TabsContent value="regras" className="mt-6" keepMounted>
         <AbaRegras regras={props.regras} />
       </TabsContent>
-      <TabsContent value="formulas" className="mt-6">
-        <AbaFormulas tipos={props.tiposModulo} regras={props.regras} />
+      <TabsContent value="formulas" className="mt-6" keepMounted>
+        <AbaFormulas
+          tipos={props.tiposModulo}
+          regras={props.regras}
+          aoIrParaRegras={() => {
+            setAba('regras');
+            window.history.replaceState(null, '', '?aba=regras');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        />
       </TabsContent>
-      <TabsContent value="importacao" className="mt-6">
+      <TabsContent value="importacao" className="mt-6" keepMounted>
         <AbaImportacao importacao={props.importacao} etiqueta={props.etiqueta} />
       </TabsContent>
     </Tabs>

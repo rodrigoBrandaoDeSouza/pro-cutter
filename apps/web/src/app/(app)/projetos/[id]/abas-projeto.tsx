@@ -65,7 +65,7 @@ export function AbasProjeto(props: {
             )}
           </TabsTrigger>
           <TabsTrigger value="regras">
-            <SlidersHorizontal /> Regras
+            <SlidersHorizontal /> Folgas e regras
           </TabsTrigger>
           <TabsTrigger value="historico">
             <History /> Histórico

@@ -79,6 +79,22 @@ test('fórmulas: valida enquanto digita, mostra prévia e salva', async ({ page 
   await expect(page.getByRole('button', { name: 'Salvar fórmulas' })).toBeDisabled();
 
   await largura.fill(original);
+  // resultado ao vivo no módulo de exemplo (L 800, 1 porta, folgas 2)
+  await expect(page.getByText('= 796 mm')).toBeVisible();
+
+  // clicar na variável insere no cursor da última fórmula
+  const quantidade = page.locator('#p0-quantidade');
+  await quantidade.fill('');
+  await quantidade.focus();
+  await page.getByRole('button', { name: /^nPortas Número de portas/ }).click();
+  await expect(quantidade).toHaveValue('nPortas');
+  await expect(quantidade).toBeFocused();
+
+  // o atalho leva às folgas
+  await page.getByRole('button', { name: 'Alterar valores' }).click();
+  await expect(page.getByLabel('Valor de Folga entre portas')).toBeVisible();
+  await page.getByRole('tab', { name: 'Fórmulas' }).click();
+
   await page.getByRole('button', { name: 'Novo tipo' }).click();
   await page.getByLabel('Nome do tipo').fill(nome);
   await page.getByRole('button', { name: 'Salvar fórmulas' }).click();

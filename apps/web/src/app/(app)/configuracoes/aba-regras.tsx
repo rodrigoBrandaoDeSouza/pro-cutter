@@ -38,11 +38,12 @@ export function AbaRegras({ regras }: { regras: ParametroRegra[] }) {
 
   return (
     <Secao
-      titulo="Parâmetros de regra"
+      titulo="Folgas e regras padrão da marcenaria"
       descricao={
         <>
-          Valores usados nas fórmulas (ex.: <code className="text-xs">portaFolgaExt</code>). Cada
-          projeto copia estes valores ao ser criado e pode ajustar; cada módulo também.
+          As folgas de porta, fundo etc. que a marcenaria usa. As fórmulas usam estes valores pelo
+          nome (ex.: <code className="text-xs">portaFolgaExt</code>). Cada projeto novo começa com
+          eles e pode ajustar só para aquele projeto; cada módulo também.
         </>
       }
       acao={

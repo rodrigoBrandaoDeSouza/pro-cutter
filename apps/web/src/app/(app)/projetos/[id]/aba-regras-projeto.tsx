@@ -32,7 +32,7 @@ export function AbaRegrasProjeto({
   return (
     <div className="grid gap-6 xl:grid-cols-[1fr_22rem]">
       <Secao
-        titulo="Regras deste projeto"
+        titulo="Folgas e regras deste projeto"
         descricao="Copiadas das Configurações quando o projeto foi criado. Ao salvar, as portas e fundos de todos os módulos são recalculados."
       >
         <form

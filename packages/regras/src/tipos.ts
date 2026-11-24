@@ -71,3 +71,14 @@ export const VARIAVEIS_DO_MODULO = [
   'espPorta',
   'espFundo',
 ] as const;
+
+/** O que cada variável do módulo significa, para a tela de fórmulas. */
+export const DESCRICAO_VARIAVEIS: Record<(typeof VARIAVEIS_DO_MODULO)[number], string> = {
+  L: 'Largura do módulo',
+  A: 'Altura do módulo',
+  P: 'Profundidade do módulo',
+  nPortas: 'Número de portas',
+  esp: 'Espessura da chapa da caixa',
+  espPorta: 'Espessura da chapa da porta',
+  espFundo: 'Espessura da chapa do fundo',
+};

@@ -37,13 +37,17 @@ export function resolverRegras(
 
 const CAMPOS = ['quantidade', 'comprimento', 'largura'] as const;
 
-/** Gera as peças (portas, fundos…) de um módulo a partir das fórmulas do seu tipo. */
-export function gerarPecas(
+/** Valores que as fórmulas de um módulo enxergam: regras, extras do tipo e medidas do módulo. */
+export function variaveisDoModulo(
   modulo: Modulo,
   tipo: TipoModulo,
   regras: ValoresRegras,
   materiais: Material[],
-): { pecas: Peca[]; erros: ErroRegra[] } {
+): ValoresRegras {
+  return ambiente(modulo, tipo, regras, materiais).vars;
+}
+
+function ambiente(modulo: Modulo, tipo: TipoModulo, regras: ValoresRegras, materiais: Material[]) {
   const porId = new Map(materiais.map((m) => [m.id, m]));
   const mat = {
     caixa: porId.get(modulo.materiais.caixa),
@@ -63,6 +67,18 @@ export function gerarPecas(
     espPorta: mat.porta?.espessura ?? 0,
     espFundo: mat.fundo?.espessura ?? 0,
   };
+
+  return { vars, mat };
+}
+
+/** Gera as peças (portas, fundos…) de um módulo a partir das fórmulas do seu tipo. */
+export function gerarPecas(
+  modulo: Modulo,
+  tipo: TipoModulo,
+  regras: ValoresRegras,
+  materiais: Material[],
+): { pecas: Peca[]; erros: ErroRegra[] } {
+  const { vars, mat } = ambiente(modulo, tipo, regras, materiais);
 
   const pecas: Peca[] = [];
   const erros: ErroRegra[] = [];

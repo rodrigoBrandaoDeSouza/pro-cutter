@@ -6,6 +6,7 @@ coverage/
 .env
 .env.*
 !.env.example
+!.env.producao.example
 packages/db/src/generated/
 test-results/
 playwright-report/

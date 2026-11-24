@@ -58,3 +58,18 @@ describe('metricas', () => {
     expect(v.total).toMatchObject({ chapas: 0, aproveitamento: 0 });
   });
 });
+
+describe('numerarPecas', () => {
+  it('numera chapa a chapa, na ordem da geometria', async () => {
+    const { numerarPecas } = await import('./numeracao.ts');
+    const plano = { chapas: [chapa(1, 'branco'), chapa(2, 'linho')] };
+    const r = numerarPecas(plano, OPS);
+    expect(r.pecas.map((p) => [p.numero, p.chapa, p.indice, p.pecaId])).toEqual([
+      [1, 1, 0, 'A'],
+      [2, 1, 1, 'B'],
+      [3, 2, 0, 'A'],
+      [4, 2, 1, 'B'],
+    ]);
+    expect(r.geometrias).toHaveLength(2);
+  });
+});

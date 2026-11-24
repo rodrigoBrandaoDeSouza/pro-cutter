@@ -1,0 +1,21 @@
+{
+  "name": "@pro-cutter/saidas",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@pro-cutter/core": "0.0.0",
+    "@pro-cutter/cvl": "0.0.0",
+    "fflate": "^0.8.3",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@pro-cutter/otimizador": "0.0.0",
+    "@pro-cutter/promob": "0.0.0",
+    "@types/qrcode": "^1.5.6"
+  }
+}

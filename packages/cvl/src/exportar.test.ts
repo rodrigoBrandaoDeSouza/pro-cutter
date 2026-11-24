@@ -69,3 +69,11 @@ describe('exportarPlano + verificarExportacao', () => {
     ).toThrow(/linho/);
   });
 });
+
+describe('nomeArquivo sem acentos', () => {
+  it('remove acentos para o nome passar bem pela pasta da máquina', () => {
+    expect(nomeArquivo('Cozinha João', 'MDF Freijó 18mm', 3)).toBe(
+      'Cozinha Joao-MDF Freijo 18mm.003.prog',
+    );
+  });
+});

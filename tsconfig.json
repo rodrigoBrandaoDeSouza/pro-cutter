@@ -1,4 +1,4 @@
 {
   "files": [],
-  "references": [{ "path": "packages/core" }, { "path": "packages/promob" }, { "path": "packages/cvl" }, { "path": "packages/otimizador" }, { "path": "packages/regras" }, { "path": "packages/db" }]
+  "references": [{ "path": "packages/core" }, { "path": "packages/promob" }, { "path": "packages/cvl" }, { "path": "packages/otimizador" }, { "path": "packages/regras" }, { "path": "packages/db" }, { "path": "packages/saidas" }]
 }

@@ -27,10 +27,18 @@ export interface ErroExportacao {
   mensagem: string;
 }
 
-/** `<projeto>-<material>.<nnn>.prog`, com caracteres inválidos para nome de arquivo trocados por "_". */
+/**
+ * `<projeto>-<material>.<nnn>.prog`, sem acentos (nome ASCII passa bem por ZIP, Windows e o Linux da CVL)
+ * e com caracteres inválidos para nome de arquivo trocados por "_".
+ */
 export function nomeArquivo(projeto: string, material: string, seq: number): string {
   // eslint-disable-next-line no-control-regex
-  const limpar = (s: string) => s.replace(/[<>:"/\\|?*\u0000-\u001f]/g, '_').trim();
+  const limpar = (s: string) =>
+    s
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .replace(/[<>:"/\\|?*\u0000-\u001f]/g, '_')
+      .trim();
   return `${limpar(projeto)}-${limpar(material)}.${String(seq).padStart(3, '0')}.prog`;
 }
 
